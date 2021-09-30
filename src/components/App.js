@@ -1,9 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
+import {HomePage} from "./HomePage";
+import {Section2Category} from "./Section2Category";
+import {Section3Modniky} from "./Section3Modniky"
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <HomePage />
+      <Section2Category />
+      <Section3Modniky />
+    {/*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +25,8 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div>*/}
+      </>
   );
 }
 
