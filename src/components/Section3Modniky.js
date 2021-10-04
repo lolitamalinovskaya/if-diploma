@@ -5,7 +5,7 @@ import Section3Modniky_All_Items from "./Section3Modniky_All_Items";
 
 
 
-export const Section3Modniky = (props) => {
+export const Section3Modniky = () => {
   return (
     <>
       <div className="section3Modniky_container">

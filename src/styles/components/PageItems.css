@@ -77,101 +77,59 @@
 
     /*section3*/
 
-    .section4Shop_container {
+    .PageItems_container {
         box-sizing: border-box;
-        min-height: 820px;
-        padding: 0 100px;
+       /* min-height: 1440px;*/
+        padding: 0 60px 0 0;
         background-color: #FFFFFF;
     }
-    .section4Shop_container_flex_for_block {
-        display: flex;
-        align-content: stretch;
-        justify-self: stretch;
-        align-self: stretch;
-        justify-content: center;
+    .header_black {
+        color: #000F08;
     }
-
-    .section4Shop_1block_content {
-        display: flex;
-        flex-direction: column;
-        /*justify-content: space-between;*/
-        margin: 80px auto 0;
-        /*
-        max-width: calc(100% - var(--one-col-width) * 2);
-        */
+    .Logo-black {
+        width: 235px;
+        height: 25px;
     }
-
-    .section4Shop_1block_name{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 0 0 30px;
-        font: 400 16px Roboto;
-    }
-    .section4Shop_1block_name p {
-        margin: 0;
-    }
-    .section4Shop_1block_name_SHOP_INSTAGRAM {
-        padding-right: 60px;
-    }
-    .section4Shop_1block_name_SHOP {
-        padding-right: 13px;
-    }
-    .NextIcon_svg {
+    .SearchIconBlack{
         width: 12px;
-        height: 24px;
+        height: 12px;
+        padding-right: 5px;
     }
-    .section4Shop_1block_container_for_image {
-        margin: 0;
-        padding: 0;
-        width: 615px;
-        height: 625.5px;
+    .WishListIconBlack {
+        width: 14px;
+        height: 12px;
     }
+    .PageItems_container {
+        display: flex;
 
-    .Mask_svg {
+    }
+    .PageImage1_container, .PageImage2_container {
+        max-width: 540px;
+        min-height: 812px;
+    }
+    .PageImage1, .PageImage2 {
         width: 100%;
         height: 100%;
-        max-width: 630px;
-        max-height: 630px;
-        margin: 0;
-        padding: 0;
+        max-width: 540px;
+        min-height: 812px;
     }
-
-    .section4Shop_1block_name_MODNIKY {
-        font: 400 16px Roboto;
-        margin: 30px 0 0;
-    }
-
-    .section4Shop_2block_content {
+    .Page_description {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
         flex-direction: column;
-        align-content: stretch;
-        justify-self: stretch;
+        padding-left: 60px;
+        justify-content: flex-start;
     }
-    .section4Shop_2block_photo1_2{
-        display: flex;
-        align-items: baseline;
-
-    }
-    .section4Shop_2block_photo3_4{
-        display: flex;
-        align-items: baseline;
-
+    h5 {
+        font: 400 16px Roboto;
+        margin: 40px 0 20px;
     }
 
-    .Mask1_svg, .Mask2_svg, .Mask3_svg, .Mask4_svg{
-        width: 100%;
-        height: 100%;
-        max-width: 313px;
-        max-height: 313px;
-    }
-    .section4Shop_2block_container_for_image {
-        width: 305px;
-        height: 313px;
-    }
+
+
+
+
+
+
 
 }
 
@@ -204,12 +162,9 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
-    /*section4Shop mobile*/
+
+    /*sectionFilters mobile*/
 
   /*thinking about it*/
 

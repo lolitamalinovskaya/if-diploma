@@ -26,6 +26,7 @@ export default function Section3Modniky_All_Items () {
           <div className="section3Modniky_Item_Card">
             <img src={Like} alt="Like" className="Like_svg"/>
             <img src={Insta1} alt="ImageOfCatalog" className="ImageOfCatalog"/>
+            <button className="ImageOfCatalog_btn">ADD TO BAG</button>
             <div className="Sale">-55%</div>
           </div>
           <div className="Chain_Prices">
@@ -38,6 +39,7 @@ export default function Section3Modniky_All_Items () {
           <div className="section3Modniky_Item_Card">
             <img src={Like} alt="Like" className="Like_svg"/>
             <img src={Insta2} alt="ImageOfCatalog" className="ImageOfCatalog"/>
+            <button className="ImageOfCatalog_btn">ADD TO BAG</button>
             <div className="Sale">-39%</div>
           </div>
           <div className="Chain_Prices">
@@ -50,6 +52,7 @@ export default function Section3Modniky_All_Items () {
           <div className="section3Modniky_Item_Card">
             <img src={Like} alt="Like" className="Like_svg"/>
             <img src={Insta3} alt="ImageOfCatalog" className="ImageOfCatalog"/>
+            <button className="ImageOfCatalog_btn">ADD TO BAG</button>
             <div className="Sale">-58%</div>
           </div>
           <div className="Chain_Prices">
@@ -62,6 +65,7 @@ export default function Section3Modniky_All_Items () {
           <div className="section3Modniky_Item_Card">
             <img src={Like} alt="Like" className="Like_svg"/>
             <img src={Insta4} alt="ImageOfCatalog" className="ImageOfCatalog"/>
+            <button className="ImageOfCatalog_btn">ADD TO BAG</button>
             <div className="Sale">-34%</div>
           </div>
           <div className="Chain_Prices">

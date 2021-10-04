@@ -5,12 +5,17 @@ import {Section2Category} from "./Section2Category";
 import {Section3Modniky} from "./Section3Modniky"
 import Section4Shop from "./Section4Shop";
 import Footer from "./Footer";
+import SectionFilters from "./SectionFilters";
+import PageItems from "./PageItems";
+
 
 function App() {
   return (
     <>
       <HomePage />
       <Section2Category />
+      <SectionFilters />{/*это должно быть пока  */}
+      <PageItems />
       <Section3Modniky />
       <Section4Shop />
       <Footer />
