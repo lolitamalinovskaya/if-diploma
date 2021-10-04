@@ -19,7 +19,7 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 2880px) {
+@media (max-width: 1440px) {
     /*.col-md-1 {
         width: var(--one-col-width);
     }
@@ -175,66 +175,70 @@
     }*/
     /*section2*/
     .section_header {
-        margin: 180px 0 0;
-        font: 400 68px Roboto;
+        margin: 90px 0 0;
+        font: 400 34px Roboto;
         color: #000F08;
         display: flex;
         justify-content: center;
     }
     .section2Category_container {
         box-sizing: border-box;
-        min-height: 785px;
-        padding: 0 205px;
+        min-height: 395px;
+        padding: 0 105px;
         background-color: #FFFFFF;
     }
     .section2Category_container_ALL_items{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 165px;
-        flex-wrap: wrap;
+        margin-top: 85px;
+        /*flex-wrap: wrap;*/
     }
     .section2Category_container_items {
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        width: 390px;
-        height: 180px;
+        width: 195px;
+        height: 90px;
         background-color: #EDE7F0;
+        margin-right: 12px;
+    }
+    .section2Category_container_items:last-child {
+        margin-right: 0;
     }
     .dress_svg {
-        width: 63px;
-        height: 100px;
+        width: 30px;
+        height: 50px;
     }
     .dress_name {
-        font: 400 48px Roboto;
-        padding-left: 35px;
+        font: 400 24px Roboto;
+        padding-left: 9px;
     }
     .tees_svg { /**/
-        width: 100px;
-        height: 90px;
+        width: 50px;
+        height: 40px;
     }
     .Swimwear_svg {
-        width: 57px;
-        height: 100px;
+        width: 30px;
+        height: 50px;
     }
     .Denim_svg {
-        width: 44px;
-        height: 100px;
+        width: 22px;
+        height: 50px;
     }
     .Tops_svg {
-        width: 70px;
-        height: 100px;
+        width: 35px;
+        height: 50px;
     }
     .Beauty_svg {
-        width: 70px;
-        height: 100px;
+        width: 35px;
+        height: 50px;
     }
 
 }
 
-/*mobile */
+/*mobile одправить респонс размер*/
 @media only screen and (max-width: 851px) {
     :root {
         --col-width: calc(100% * 1 / 6);
@@ -264,15 +268,15 @@
         width: 100%;
     }
     .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     /*section2Category mobile*/
 
     .section_header {
-        margin: 80px 0 0;
-        font: 400 64px Roboto;
+        margin: 40px 0 0;
+        font: 400 32px Roboto;
         display: flex;
         justify-content: center;
     }
@@ -281,40 +285,41 @@
         padding: 0 50px;
     }
     .section2Category_container_items {
-        width: 360px;
-        height: 165px;
-        margin-bottom: 40px;
+        width: 180px;
+        height: 80px;
+        margin-bottom: 20px;
     }
     .section2Category_container_ALL_items{
-        margin-top: 80px;
+        flex-wrap: wrap;
+        margin-top: 40px;
     }
     .dress_svg {
-        width: 50px;
-        height: 80px;
+        width: 25px;
+        height: 40px;
     }
     .dress_name {
-        font: 400 42px Roboto;
-        padding-left: 45px;
+        font: 400 21px Roboto;
+        padding-left: 25px;
     }
     .tees_svg { /**/
-        width: 85px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
     }
     .Swimwear_svg {
-        width: 45px;
-        height: 80px;
+        width: 25px;
+        height: 40px;
     }
     .Denim_svg {
-        width: 35px;
-        height: 80px;
+        width: 20px;
+        height: 40px;
     }
     .Tops_svg {
-        width: 55px;
-        height: 80px;
+        width: 30px;
+        height: 40px;
     }
     .Beauty_svg {
-        width: 55px;
-        height: 80px;
+        width: 25px;
+        height: 40px;
     }
 
 

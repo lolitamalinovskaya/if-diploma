@@ -3,6 +3,8 @@ import '../App.css';
 import {HomePage} from "./HomePage";
 import {Section2Category} from "./Section2Category";
 import {Section3Modniky} from "./Section3Modniky"
+import Section4Shop from "./Section4Shop";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <HomePage />
       <Section2Category />
       <Section3Modniky />
+      <Section4Shop />
+      <Footer />
     {/*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
