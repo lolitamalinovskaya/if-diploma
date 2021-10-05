@@ -6,7 +6,10 @@ import SearchIconBlack from "../svg/search-icon-black.svg";
 import WishListIconBlack from "../svg/wishlist-black.svg";
 import PageImage1 from "../images/pageImage1.png";
 import PageImage2 from "../images/pageImage2.png";
-import Arrow from "../svg/more.svg";
+import ColorBox from "../images/color-item.png";
+import WishlistIcon from "../svg/wishlist-icon.svg";
+import DecrementIcon from "../svg/collapse-icon.svg";
+import IncrementIcon from "../svg/expand-icon.svg"
 
 
 
@@ -58,17 +61,50 @@ export default function PageItems() {
           <h5>
             CHALK SAINTS BOYFRIEND
           </h5>
-          <p>
+          <p className="page_price">
             USD $300.00
           </p>
+          <p className="page_pre_order">PRE-ORDER</p>
+          <p className="page_color">COLOR</p>
+          <img src={ColorBox} alt="ColorBox" className="ColorBox" />
+          <p className="page_size_header">SIZE</p>
+          <div className="page_size_container">
+          <p className="page_size_item">S</p>
+          <p className="page_size_item">M</p>
+          <p className="page_size_item">L</p>
+          <p className="page_size_item">XL</p>
+          </div>
+          <div className="pages_container">
+          <button className="page_button">ADD TO BAG</button>
+          <button className="page_button_wishlist"> <img src={WishlistIcon} alt="wishList" className="WishListIcon"/></button>
+          </div>
 
+          <div className="description_container">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_description" />
+            <img src={DecrementIcon} alt="DecrementIcon" className="DecrementIcon_description" />
+            <h6 className="description_header">PRODUCT DESCRIPTION</h6>
+          </div>
+          <p className="description">
+            Saints are a low-waist, drop crotch <br/>
+            relaxed boyfriend jean. Straight fit across<br/>
+            the hips, bow shape legs, with knee darts <br/>and tapered leg. Back pockets dropped<br/>
+            slightly for slouch feel.
+          </p>
+
+
+          <div className="shipping_container">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_shipping" />
+            <img src={DecrementIcon} alt="DecrementIcon" className="DecrementIcon_shipping" />
+            <h6 className="description_header">SHIPPING & RETURNS</h6>
+          </div>
+
+          <div className="fabric_container">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_shipping" />
+            <img src={DecrementIcon} alt="DecrementIcon" className="DecrementIcon_shipping" />
+            <h6 className="description_header">FABRIC COMPOSITION</h6>
+          </div>
         </div>
-
-
-
       </div>
-
-
       <Footer/>
     </>
   )

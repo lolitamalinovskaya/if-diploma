@@ -123,6 +123,120 @@
         font: 400 16px Roboto;
         margin: 40px 0 20px;
     }
+    .page_price {
+        font: 400 12px Roboto;
+        margin: 0 0 10px;
+    }
+    .page_pre_order {
+        font: 400 12px Roboto;
+        margin: 0 0 30px;
+        color: #D8D8D8;
+    }
+    .page_color, .page_size_header {
+        color: #8C8C8C;
+        font: 400 12px Roboto;
+        margin: 0 0 10px;
+    }
+    .page_size_header {
+       margin-bottom: 20px;
+    }
+    .ColorBox{
+        width: 34px;
+        height: 34px;
+        margin-bottom: 30px;
+    }
+    .page_size_container{
+        display: flex;
+    }
+    .page_size_item {
+        padding: 0 10px 0;
+        margin: 0;
+        border-bottom-color: #FFFFFF;
+    }
+/*
+    .page_size_item:hover { сделать линией афтер
+        border-bottom: 1.5px solid black;
+        padding-bottom: 5px;
+        transition: border-bottom-color 1.5s;
+    }*/
+    .page_size_item:first-child {
+        padding-left: 0;
+    }
+    .pages_container {
+        display: flex;
+        padding-top: 40px;
+    }
+    .page_button, .page_button_wishlist {
+        font: 400 16px Roboto;
+        color: #FFFFFF;
+        height: 50px;
+        width: 190px;
+        border: none;
+        outline: none;
+        background-color: #000F08;
+        overflow: hidden;
+    }
+    .page_button_wishlist {
+        width: 50px;
+        margin-left: 1px;
+    }
+    .WishListIcon {
+        padding-top: 3px;
+        width: 18px;
+        height: 16px;
+    }
+    .description_container {
+        display: flex;
+        padding-top: 40px;
+        align-items: center;
+    }
+    .IncrementIcon_description{ /*+*/
+        display: none;
+        width: 7px;
+        height: 7px;
+        padding-right: 17px;
+    }
+    .DecrementIcon_description{ /*-*/
+        width: 7px;
+        height: 1px;
+        padding-right: 17px;
+    }
+    .description_header{
+        font: 400 12px Roboto;
+        margin: 0;
+    }
+    .description {
+        margin: 20px 0 0;
+        font: 400 12px Roboto;
+        color: #8C8C8C;
+        line-height: 18px;
+    }
+    .shipping_container, .fabric_container{
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+    }
+    .IncrementIcon_shipping{
+        width: 7px;
+        height: 7px;
+        padding-right: 17px;
+    }
+    .DecrementIcon_shipping{
+        display: none;
+    }
+    .fabric_container{
+        padding-top: 18px;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
