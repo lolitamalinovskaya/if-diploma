@@ -5,7 +5,7 @@ import Section3Modniky_All_Items from "./Section3Modniky_All_Items";
 
 
 
-export const Section3Modniky = () => {
+export const Section3Modniky = ({state, updateState}) => {
   return (
     <>
       <div className="section3Modniky_container">
@@ -15,7 +15,7 @@ export const Section3Modniky = () => {
             <img src={Arrow} alt="arrow" className="arrow_right" />
           </div>
         </div>
-        <Section3Modniky_All_Items  />
+        <Section3Modniky_All_Items state={state} updateState={updateState} />
       </div>
     </>
   )}
