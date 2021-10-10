@@ -22,7 +22,7 @@ export default function Sign() {
               <input type="checkbox" className="sign_Input_checkbox" />
               <label className="sign_label_checkbox">Let's get personal! We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions. No nasties.</label>
             </div>
-            <p className="sign_agree">By signing up you agree to Terms of Service and Privacy Policy</p>
+            <p className="sign_agree">By signing up you agree to <span className="sign_agree_underline">Terms of Service</span> and <span className="sign_agree_underline">Privacy Policy</span></p>
             <div className="sign_button_container">
             <button className="sign_button">SIGN UP</button>
             </div>

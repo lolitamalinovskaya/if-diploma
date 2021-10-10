@@ -90,6 +90,7 @@
     }
 
     .header_container {
+        user-select: none;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -140,6 +141,7 @@
         background-color: #383838;
     }*/
     .main_container_NEW_COLLECTION {
+        user-select: none;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

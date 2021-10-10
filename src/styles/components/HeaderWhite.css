@@ -77,85 +77,21 @@
 
     /*section3*/
 
-    .footer_container {
-        box-sizing: border-box;
-        min-height: 540px;
-        padding: 0 100px;
-        background-color: #FFFFFF;
-        user-select: none;
-    }
-    .footer_header {
-        display: flex;
-        justify-content: center;
-        font: 400 16px Roboto;
-        margin-top: 70px;
-    }
-    .footer_LabelForInput {
-        display: flex;
-        justify-content: center;
-        font: 400 12px Roboto;
-        margin-top: 16px;
-    }
-    .footer_ContainerForInput {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    .footer_Input {
-        display: flex;
-        justify-content: center;
-        font: 400 16px Roboto;
-        margin-top: 64px;
-        color: #8C8C8C;
-        width: 360px;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #D8D8D8;
-    }
-
-    .footer_button {
-        font: 400 16px Roboto;
+    .header_black {
         color: #000F08;
-        border: none;
-        outline: none;
-        background-color: Transparent;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        overflow: hidden;
-        border-bottom: 1px solid #D8D8D8;
     }
-    .footer_lists_container {
-        display: flex;
-        margin-top: 60px;
+    .Logo-black {
+        width: 235px;
+        height: 25px;
     }
-    .footer_lists_container_1block {
-        margin-right: 150px;
-    }
-    h4 {
-        font: 400 16px Roboto;
-        margin: 0 0 30px;
-    }
-    li {
-        font: 400 12px Roboto;
-        list-style-type: none;
-        margin-bottom: 20px;
-    }
-    .Footer_Li_with_icon{
-        display: flex;
-        align-items: flex-start;
-        align-content: center;
-    }
-    .footer_lists_container_2block {
-        margin-right: 225px;
-    }
-    .footer_lists_container_3block{
-        margin-right: 215px;
-    }
-    .Facebook_svg, .Odnoklassniki_svg, .Instagram_svg{
+    .SearchIconBlack{
         width: 12px;
         height: 12px;
-        padding-right: 10px;
+        padding-right: 5px;
+    }
+    .WishListIconBlack {
+        width: 14px;
+        height: 12px;
     }
 
 }
@@ -189,12 +125,9 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
-    /*section4Shop mobile*/
+
+    /*sectionFilters mobile*/
 
   /*thinking about it*/
 

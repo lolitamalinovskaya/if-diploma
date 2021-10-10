@@ -7,16 +7,11 @@ import Section3Modniky_1_Item from "./Section3Modniky_1_Item";
 import {Link} from "react-router-dom";
 
 
-export default function SectionFilters({state, updateState}) {
-  const [page, setPage] = useState(1);
+export default function SectionSearch({state, updateState}) {
 
-  const clickHandler = () => setPage(page + 1);
+  const data = state.searchResult || [];
 
-  const data = state.data || [];
-
-  const filtered = [...data].filter((el) => el.type === state.filterType);
-
-  const items = filtered.splice(0, 8 * page).map((el) => {
+  const items = [...data].map((el) => {
 
     const price = el.price.value / 100
 
@@ -26,15 +21,11 @@ export default function SectionFilters({state, updateState}) {
   return (
     <>
       <div className="SectionFilters_container">
-        <h2 className="sectionFilters_header">{state.filterType}</h2>
+        <h2 className="sectionFilters_header">Search results</h2>
 
         <div className="sectionFilters_Item_All_items_container">
           {items.length > 0 ? items : <div className="SectionFilters_notFound_container"><p className="SectionFilters_notFound">No beauty products found</p></div>}
         </div>
-
-        {filtered.length > 0 ? <div className="Button_container">
-          <button onClick={clickHandler} className="Button_show_more">Show more</button>
-        </div> : null}
       </div>
     </>
   )

@@ -75,104 +75,6 @@
     .col-md-14 {
         width: 100%;*/
 
-  /*  .container_for_background {
-        background-image: url("../../images/background.jpg");
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-height: 1675px;
-        min-height: 100vh;
-    }
-
-    header {
-        font: 400 24px Roboto;
-        color: #FFFFFF;
-    }
-
-    .header_container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 120px;
-     !*   width: 100%; тутчто-то надо делць с респонсом*!
-    }
-
-    .header_element {
-
-    }
-
-    .header_container_NEW_ARRIVALS {
-        box-sizing: border-box;
-        min-width: 570px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .search {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .header_element p {
-        margin: 60px 0;
-    }
-
-
-    .Logo {
-        width: 475px;
-        height: 50px;
-    }
-
-    .SearchIcon {
-        width: 24px;
-        height: 24px;
-        padding-right: 10px;
-    }
-
-    .WishListIcon {
-        width: 24px;
-        height: 24px;
-    }
-
-    !*.main_container {
-        background-color: #383838;
-    }*!
-    .main_container_NEW_COLLECTION {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-left: 300px;
-        margin-top: 990px;
-    }
-
-    h1 {
-        font: 700 76px Roboto;
-        color: #FFFFFF;
-        margin: unset;
-        padding: unset;
-    }
-
-    .main_element_text {
-        font: 400 32px Roboto;
-        color: #FFFFFF;
-        margin-top: 40px;
-        margin-bottom: 60px;
-    }
-
-    .main_element_button {
-        font: 400 32px Roboto;
-        color: #FFFFFF;
-        height: 100px;
-        width: 480px;
-        border: 2px solid #FFFFFF;
-        outline: none;
-        background-color: Transparent;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        overflow: hidden;
-    }*/
     /*section2*/
     .section_header {
         margin: 90px 0 0;
@@ -201,8 +103,13 @@
         box-sizing: border-box;
         width: 195px;
         height: 90px;
-        background-color: #EDE7F0;
+        background-color: #ede7f0;
         margin-right: 12px;
+        transition: .95s background-color;
+    }
+    .section2Category_container_items:hover{
+        background-color: #aaa1c1;
+        transition: .95s background-color;
     }
     .section2Category_container_items:last-child {
         margin-right: 0;

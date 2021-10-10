@@ -1,0 +1,250 @@
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../fonts/Roboto-400-l.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../../fonts/Roboto-500-l.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
+}
+@media (max-width: 2880px) {
+    /*.col-md-1 {
+        width: var(--one-col-width);
+    }
+
+    .col-md-2 {
+        width: calc(var(--one-col-width) * 2);
+    }
+
+    .col-md-3 {
+        width: calc(var(--one-col-width) * 3);
+    }
+
+    .col-md-4 {
+        width: calc(var(--one-col-width) * 4);
+    }
+
+    .col-md-5 {
+        width: calc(var(--one-col-width) * 5);
+    }
+
+    .col-md-6 {
+        width: calc(var(--one-col-width) * 6);
+    }
+
+    .col-md-7 {
+        width: calc(var(--one-col-width) * 7); !*50%*!
+    }
+
+    .col-md-8 {
+        width: calc(var(--one-col-width) * 8);
+    }
+
+    .col-md-9 {
+        width: calc(var(--one-col-width) * 9);
+    }
+
+    .col-md-10 {
+        width: calc(var(--one-col-width) * 10);
+    }
+
+    .col-md-11 {
+        width: calc(var(--one-col-width) * 11);
+    }
+
+    .col-md-12 {
+        width: calc(var(--one-col-width) * 12);
+    }
+
+    .col-md-13 {
+        width: calc(var(--one-col-width) * 13);
+    }
+
+    .col-md-14 {
+        width: 100%; */
+
+   .bag_container {
+       user-select: none;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin: 25px 455px;
+   }
+    .bag_header{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+
+    }
+    .bag_header_bag{
+        font: 20px Roboto;
+        padding-right: 20px;
+        margin: 0;
+
+    }
+    .bag_header_items{
+        font: 12px Roboto;
+        color: #8C8C8C;
+        margin: 0;
+    }
+    .bag_content_container{
+         border-top: 1px solid #D8D8D8;
+         padding-top: 30px;
+         display: flex;
+         padding-bottom: 85px;
+         border-bottom: 1px solid #D8D8D8;
+    }
+    .bag_image_container{
+        max-width: 160px;
+        max-height: 230px;
+    }
+    .bag_image{
+        width: 100%;
+        height: 100%;
+        max-width: 160px;
+        max-height: 230px;
+        object-fit: contain;
+    }
+    .bag_description_container{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        position: relative;
+    }
+    .bag_description{
+        font: 500 16px Roboto;
+        line-height: 24px;
+        max-width: 290px;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    .bag_price, .bag_color{
+        font: 12px Roboto;
+        margin: 0;
+    }
+    .bag_color_container,  .bag_size_container{
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+    }
+    .bag_dropdown_svg{
+        width: 11px;
+        height: 6px;
+        margin-left: 7px;
+    }
+    .bag_size_container{
+        padding-top: 20px;
+    }
+    .bag_remove_container{
+        display: flex;
+        align-items: baseline;
+        position: absolute;
+        bottom: -30%;
+        left: 85%;
+    }
+    .bag_remove_svg{
+        width: 12px;
+        height: 12px;
+        padding-right: 7px;
+    }
+    .bag_remove{
+        margin: 0;
+    }
+    .bag_totalCount_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bag_totalCount {
+        font: 500 20px Roboto;
+        line-height: 24px;
+        margin: 40px 0 24px;
+
+    }
+    .bag_button{
+        font: 400 16px Roboto;
+        color: #FFFFFF;
+        height: 50px;
+        width: 240px;
+        border: none;
+        outline: none;
+        background-color: #000000;
+        cursor: pointer;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .bag_visa{
+        display: flex;
+    }
+    .bag_mastercard_svg{
+        width: 40px;
+        height: 24px;
+        padding-right: 5px;
+    }
+    .bag_visa_svg{
+        width: 40px;
+        height: 24px;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+/*mobile */
+@media only screen and (max-width: 900px) {
+    :root {
+        --col-width: calc(100% * 1 / 6);
+    }
+
+    .col-sm-1 {
+        width: var(--col-width);
+    }
+
+    .col-sm-2 {
+        width: calc(var(--col-width) * 2);
+    }
+
+    .col-sm-3 {
+        width: calc(var(--col-width) * 3); /* 50% */
+    }
+
+    .col-sm-4 {
+        width: calc(var(--col-width) * 4);
+    }
+
+    .col-sm-5 {
+        width: calc(var(--col-width) * 5);
+    }
+
+    .col-sm-6 {
+        width: 100%;
+    }
+
+
+    /*sectionFilters mobile*/
+
+  /*thinking about it*/
+
+   /* {flex-wrap: wrap;}*/
+
+}

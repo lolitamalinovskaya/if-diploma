@@ -20,7 +20,6 @@ export const FilterButtonItem = ({className, image, name, updateState}) => {
   )
 }
 
-
 export const Section2Category = ({state, updateState}) => {
   return (
     <>

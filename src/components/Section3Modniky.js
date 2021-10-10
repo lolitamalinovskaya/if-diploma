@@ -14,6 +14,9 @@ export const Section3Modniky = ({state, updateState}) => {
           <div id="spinner_all" className="arrow_position_right">
             <img src={Arrow} alt="arrow" className="arrow_right" />
           </div>
+          <div id="spinner_all" className="arrow_position_left">
+            <img src={Arrow} alt="arrow" className="arrow_left" />
+          </div>
         </div>
         <Section3Modniky_All_Items state={state} updateState={updateState} />
       </div>

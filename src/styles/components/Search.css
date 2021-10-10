@@ -75,108 +75,37 @@
     .col-md-14 {
         width: 100%;}*/
 
-    .sign_container {
-        background-color: #BDBDBD;
-        max-height: 840px;
-        min-height: 100vh;
+    .search_container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .sign_container_window {
+        align-items: stretch;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
         box-sizing: border-box;
-        width: 500px;
-        height: 565px;
-        background-color: #FFFFFF;
+        max-width: 350px;
+        height: 35px;
+        position: absolute;
+        left: 60%;
     }
-    .sign_container_window_signIN{
-        box-sizing: border-box;
-        width: 500px;
-        height: 350px;
-        background-color: #FFFFFF;
-    }
-    .sign_window_content {
+    .search_input{
         display: flex;
-        flex-direction: column;
-        padding: 40px;
-    }
-    .sign_window_header_container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .sign_window_header {
-        font: 400 16px Roboto;
-        margin: 0;
-    }
-    .CloseIcon{
-        width: 16px;
-        height: 16px;
-    }
-    .sign_Input_First_Name {
-        display: flex;
-        justify-content: center;
-        font: 400 12px Roboto;
-        padding-bottom: 10px;
-        color: #8C8C8C;
+        font: 400 18px Roboto;
+        color: white;
         width: 400px;
+        padding-left: 10px;
         outline: none;
-        border: none;
-        border-bottom: 1px solid #D8D8D8;
-        margin-bottom: 30px;
+        border: 1px solid white;
+        border-right: none;
+        background-color: transparent;
     }
-    .sign_Input_checkbox_container {
-        display: flex;
-       /* justify-content: space-between;*/
-        align-items: flex-start;
-    }
-    .sign_Input_checkbox{
-      /*  width: 16px;
-        height: 16px;
-        margin: 0;
-        background: #000000;
-        appearance: none;
-        border: none;
-        color: #FFFFFF;*/
-    }
-    .sign_label_checkbox {
-        font: 400 12px Roboto;
-        line-height: 18px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-    .sign_agree{
-        font: 400 12px Roboto;
-        color: #8C8C8C;
-        margin: 0 0 30px 0;
-    }
-    .sign_agree_underline{
-        text-decoration: underline;
-        color: black;
+    .search_button{
+        font: 400 18px Roboto;
+        color: white;
+        width: 140px;
+        border: 1px solid white;
+        outline: none;
+        background-color: Transparent;
+        border-left: none;
     }
 
-    .sign_button_container{
-        display: flex;
-        justify-content: center;
-    }
-    .sign_button{
-        font: 400 16px Roboto;
-        color: #FFFFFF;
-        height: 50px;
-        width: 240px;
-        border: none;
-        outline: none;
-        background-color: #000000;
-        cursor: pointer;
-        overflow: hidden;
-    }
-    .sign_have_account{
-        padding-top: 30px;
-        margin: 0;
-        line-height: 12px;
-        text-decoration: underline;
-    }
 }
 
 /*mobile */

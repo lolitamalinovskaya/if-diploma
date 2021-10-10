@@ -82,6 +82,7 @@
        /* min-height: 1440px;*/
         padding: 0 60px 0 0;
         background-color: #FFFFFF;
+        user-select: none;
     }
     .header_black {
         color: #000F08;
@@ -144,24 +145,25 @@
         width: 34px;
         height: 34px;
         margin-bottom: 30px;
+        border: 1px solid white;
+        outline: 1px solid black;
     }
     .page_size_container{
         display: flex;
+        margin-left: -10px;
     }
     .page_size_item {
-        padding: 0 10px 0;
+        padding: 0 10px 5px;
         margin: 0;
-        border-bottom-color: #FFFFFF;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.2s;
     }
-/*
-    .page_size_item:hover { сделать линией афтер
-        border-bottom: 1.5px solid black;
-        padding-bottom: 5px;
-        transition: border-bottom-color 1.5s;
-    }*/
-    .page_size_item:first-child {
-        padding-left: 0;
+
+    .page_size_item:hover {
+        border-bottom: 1px solid black;
+        transition: border-bottom-color 0.5s;
     }
+
     .pages_container {
         display: flex;
         padding-top: 40px;
@@ -196,6 +198,9 @@
         height: 7px;
         padding-right: 17px;
     }
+    .IncrementIcon_description:first-child{
+        display: block;
+    }
     .DecrementIcon_description{ /*-*/
         width: 7px;
         height: 1px;
@@ -210,6 +215,7 @@
         font: 400 12px Roboto;
         color: #8C8C8C;
         line-height: 18px;
+        max-width: 215px;
     }
     .shipping_container, .fabric_container{
         display: flex;
@@ -223,9 +229,6 @@
     }
     .DecrementIcon_shipping{
         display: none;
-    }
-    .fabric_container{
-        padding-top: 18px;
     }
 
 

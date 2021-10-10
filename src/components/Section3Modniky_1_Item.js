@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/components/Section3Modniky.css';
+import '../styles/components/SectionFilters.css';
 import Like from '../svg/like.svg'
 import {useEffect, useState} from "react/cjs/react.production.min";
 import Insta1 from '../images/insta1.jpg';
@@ -20,8 +21,8 @@ export default function Section3Modniky_1_Item({imageURL, price, priceBeforeSale
         {sale > 0 ? <div className="Sale">{sale}%</div> : null}
       </div>
       <div className="Chain_Prices">
-        {priceBeforeSale ? <p className="PriceBeforeSale">{Number(priceBeforeSale).toFixed(2)}</p> : null}
-        <p className="Price">{Number(price).toFixed(2)}</p>
+        {priceBeforeSale ? <p className="PriceBeforeSale">${Number(priceBeforeSale).toFixed(2)}</p> : null}
+        <p className={priceBeforeSale ? "Price" : "Filter_Price"}>${Number(price).toFixed(2)}</p>
       </div>
     </div>
       </>
