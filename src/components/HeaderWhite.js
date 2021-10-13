@@ -21,17 +21,10 @@ export default function HeaderWhite() {
                 <p>COLLECTIONS</p>
               </div>
             </div>
-            <div className="header_element">
+            <div className="header_element_logo">
               <img src={LogoBlack} alt="logo" className="Logo-black"/>
             </div>
-            <div className="header_container_NEW_ARRIVALS">
-              <div className="header_element search">
-                <img src={SearchIconBlack} alt="search" className="SearchIconBlack"/>
-                <p>SEARCH</p>
-              </div>
-              <div className="header_element">
-                <p>SIGN IN</p>
-              </div>
+            <div className="header_container_NEW_ARRIVALS_white">
               <div className="header_element">
                 <p>BAG (2)</p>
               </div>

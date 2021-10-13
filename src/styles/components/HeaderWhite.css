@@ -80,6 +80,11 @@
     .header_black {
         color: #000F08;
     }
+ /*   .header_element_logo{
+        display: flex;
+        justify-content: center; xyinia
+        align-items: center;
+    }*/
     .Logo-black {
         width: 235px;
         height: 25px;
@@ -92,6 +97,13 @@
     .WishListIconBlack {
         width: 14px;
         height: 12px;
+    }
+    .header_container_NEW_ARRIVALS_white{
+        box-sizing: border-box;
+        min-width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }

@@ -192,7 +192,6 @@
 
     .section3Modniky_Item_Card:hover .ImageOfCatalog_btn {
         display: inline-block;
-     /*   transition: .65s none;*//*это хз как сделать*/
     }
 
     .ImageOfCatalog{
@@ -225,6 +224,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .Items_name {
+        font: 400 18px Roboto;
+        padding-top: 15px;
     }
     .Chain_Prices {
         display: flex;

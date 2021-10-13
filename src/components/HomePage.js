@@ -3,6 +3,8 @@ import '../styles/components/HomePage.css';
 import Logo from '../svg/brand-logo.svg'
 import SearchIcon from '../svg/search-icon.svg';
 import WishListIcon from '../svg/wishlist-icon.svg';
+import Hamburger from '../svg/hamburger-menu-icon.svg';
+import ShoppingCart from '../svg/shopping-cart-icon.svg'
 import Search from "./Search";
 import {Link, Route, useParams} from "react-router-dom";
 import {useState} from "react";
@@ -12,6 +14,8 @@ export const HomePage = ({state, updateState}) => {
   const [showSearch, setShowSearch] = useState(false);
   const onClick = () => setShowSearch(!showSearch);
 
+  const SignOutHandler = () => updateState({type: 'LOGOUT'})
+
   return (
     <>
       <div className="container_for_background">
@@ -20,6 +24,7 @@ export const HomePage = ({state, updateState}) => {
           <div className="header_container_NEW_ARRIVALS">
             <div className="header_element">
               <p>NEW ARRIVALS</p>
+              <img src={Hamburger} alt="hamburger" className="Hamburger"/>
             </div>
             <div className="header_element">
               <p>SHOP</p>
@@ -36,11 +41,16 @@ export const HomePage = ({state, updateState}) => {
               <img src={SearchIcon} alt="search" className="SearchIcon"/>
               <p>SEARCH</p>
             </div>
-            <Link to={`/signIn`} style={{textDecoration: 'none', color: 'unset', margin: 'unset'}}><div className="header_element">
-              <p>SIGN IN</p>
-            </div></Link>
+            { state.user === null ? <Link to={`/signIn`} style={{textDecoration: 'none', color: 'unset', margin: 'unset'}}>
+              <div className="header_element">
+                <p>SIGN IN</p>
+              </div>
+            </Link> :  <div className="header_element" onClick={SignOutHandler}>
+              <p>SIGN OUT</p>
+            </div> }
             <div className="header_element">
               <p>BAG (2)</p>
+              <img src={ShoppingCart} alt="ShoppingCart" className="ShoppingCart"/>
             </div>
             <div className="header_element">
               <img src={WishListIcon} alt="wishList" className="WishListIcon"/>

@@ -105,12 +105,17 @@
         height: 90px;
         background-color: #ede7f0;
         margin-right: 12px;
-        transition: .95s background-color;
+        transition: .1s background-color;
     }
     .section2Category_container_items:hover{
         background-color: #aaa1c1;
-        transition: .95s background-color;
+        transition: .1s background-color;
     }
+    .section2Category_active {
+        background-color: #aaa1c1;
+    }
+
+
     .section2Category_container_items:last-child {
         margin-right: 0;
     }

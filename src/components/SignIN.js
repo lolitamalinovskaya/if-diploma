@@ -2,6 +2,8 @@ import React from "react";
 import '../styles/components/Sign.css';
 import CloseIcon from "../svg/close-icon.svg";
 import {useState} from "react";
+import {Redirect} from "react-router-dom";
+
 
 
 
@@ -14,8 +16,9 @@ export default function SignIN({state, updateState}) {
   const clickHandler  = () => {
     updateState({type: "LOGIN", login: login, password: password});
   }
-
-
+  if(state.user !== null){
+     return <Redirect to={'/'}/>
+  }
 
   return (
     <>
@@ -33,10 +36,11 @@ export default function SignIN({state, updateState}) {
             <button onClick={clickHandler} className="sign_button">SIGN IN</button>
             </div>
             <p className="sign_have_account">Forgot your password?</p>
+            {state.loginError ? <p>{state.loginError}</p> : null}
           </div>
         </div>
       </div>
-      <p></p>
+
     </>
 )
 }

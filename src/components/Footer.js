@@ -3,6 +3,7 @@ import '../styles/components/Footer.css';
 import Facebook from '../svg/facebok-logo.svg'
 import Odnoklassniki from '../svg/odonklassniki-logo.svg';
 import Instagram from '../svg/instagram-logo.svg';
+import Subscription from "./Subscription";
 
 export default function Footer() {
 
@@ -11,11 +12,7 @@ export default function Footer() {
       <div className="footer_container">
         <h3 className="footer_header">SIGN UP FOR UPDATES</h3>
         <p className="footer_LabelForInput">Sign up for exclusive early sale access and tailored new arrivals.</p>
-        <div className="footer_ContainerForInput">
-          <input className="footer_Input" type="text" placeholder="Your email address"/>
-          <button className="footer_button">JOIN</button>
-        </div>
-
+        <Subscription />
         <div className="footer_lists_container">
           <div className="footer_lists_container_1block">
             <h4>CUSTOMER SERVICE</h4>

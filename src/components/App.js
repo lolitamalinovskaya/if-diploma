@@ -15,8 +15,6 @@ import Bag from "./Bag";
 import SectionSearch from "./SectionSearch";
 
 
-
-
 function App() {
   const [state, setState] = useReducer((state, action) => {
     if (action.type === `UPDATE_DATE`) {
@@ -29,7 +27,7 @@ function App() {
     }
     if (action.type === 'SEARCH') {
       console.log(action.payload);
-      if(action.payload === undefined || action.payload.length === 0){
+      if (action.payload === undefined || action.payload.length === 0) {
         return state;
       }
       const data = state.data || []
@@ -40,14 +38,34 @@ function App() {
 
       return {...state, searchResult: filtered}
     }
-    if(action.type === 'LOGIN') {
+    if (action.type === 'LOGIN') {
       const login = action.login;
       const password = action.password;
+      if(login === 'ADMIN' && password === 'ADMIN'){
+        localStorage.setItem('user', login)
+        return {...state, user: login, loginError: null}
+      } else {
+        return {...state, user: null, loginError: 'User not found'}
+      }
+    }
+    if(action.type === 'LOGOUT') {
+      localStorage.removeItem('user')
+      return {...state, user: null}
+    }
+    if(action.type === "SLIDER_NEXT") {
+      const sliderStart = state.sliderStart + 4;
+
+      return {...state, sliderStart: Math.min(sliderStart, (state.data || []).length - 4)}
+
+    }
+    if(action.type === "SLIDER_PREV") {
+      const sliderStart = state.sliderStart - 4;
+      return {...state, sliderStart: Math.max(0, sliderStart)}
     }
 
     return state;
   }, {filterType: `Dresses`}, () => {
-    return {filterType: `Dresses`}
+    return {user: localStorage.getItem('user'),filterType: `Dresses`, sliderStart: 0}
   });
 
   useEffect(() => {
@@ -59,27 +77,26 @@ function App() {
   }, [])
 
 
-
   return (
     <>
-    <Router>
-      <Switch>
-        <Route path={'/product/:id'}> <PageItems state={state} updateState={setState}/> </Route>
-        <Route exact path={'/'}>
-          <HomePage state={state} updateState={setState}/>
-          <SectionSearch state={state} updateState={setState} />
-         {/* <Sign/>*/}
-          <Section2Category state={state} updateState={setState}/>
-          <SectionFilters state={state} updateState={setState}/>
-          <Bag/>
-          <Section3Modniky state={state} updateState={setState}/>
-          <Section4Shop/>
-          <Footer/>
-        </Route>
-        <Route exact path={'/signIn'}><SignIN/></Route>
-      </Switch>
-    </Router>
-      </>
+      <Router>
+        <Switch>
+          <Route path={'/product/:id'}> <PageItems state={state} updateState={setState}/> </Route>
+          <Route exact path={'/'}>
+            <HomePage state={state} updateState={setState}/>
+            { state.searchResult ? <SectionSearch state={state} updateState={setState}/> : null}
+           {/* <Sign />*/}
+            <Section2Category state={state} updateState={setState}/>
+            <SectionFilters state={state} updateState={setState}/>
+            <Bag/>
+            <Section3Modniky state={state} updateState={setState}/>
+            <Section4Shop/>
+            <Footer/>
+          </Route>
+          <Route exact path={'/signIn'}><SignIN state={state} updateState={setState}/></Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
