@@ -94,7 +94,7 @@
     .section4Shop_1block_content {
         display: flex;
         flex-direction: column;
-        /*justify-content: space-between;*/
+
         margin: 80px auto 0;
         /*
         max-width: calc(100% - var(--one-col-width) * 2);
@@ -172,11 +172,14 @@
         width: 305px;
         height: 313px;
     }
+    .section4Shop_1block_name_MODNIKY_response{
+        display: none;
+    }
 
 }
 
 /*mobile */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1300px) {
     :root {
         --col-width: calc(100% * 1 / 6);
     }
@@ -204,15 +207,75 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 20px;
-        padding-right: 20px;
+    .section4Shop_container{
+        padding: 0 4px;
+        min-height: unset;
+    }
+    .section4Shop_container_flex_for_block {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .section4Shop_1block_content {
+        margin: 40px 0 0;
+        align-self: center;
+    }
+    .section4Shop_1block_name{
+        margin: 0 0 20px;
+        font: 400 12px Roboto;
+        align-self: flex-start;
+    }
+    .section4Shop_1block_name_SHOP_INSTAGRAM {
+        padding-right: 40px;
+    }
+    .section4Shop_1block_name_SHOP {
+        padding-right: 8px;
+    }
+    .NextIcon_svg {
+        width: 10px;
+        height: 12px;
+    }
+    .section4Shop_1block_container_for_image, .section4Shop_2block_container_for_image {
+        max-width: unset;
+        max-height: unset;
+        width: 100%;
+        height: auto;
+        min-width: 410px;
+        object-fit: fill;
+    }
+    .Mask_svg{
+        width: 100%;
+        height: auto;
     }
 
-    /*section4Shop mobile*/
+     .Mask1_svg, .Mask2_svg, .Mask3_svg, .Mask4_svg {
+         max-width: unset;
+         max-height: unset;
+         width: 100%;
+         height: auto;
+         min-width: 410px;
+         object-fit: cover;
+    }
+    .section4Shop_1block_name_MODNIKY {
+        display: none;/*надпись перенести*/
+    }
+    .section4Shop_2block_content {
+        align-items: center;
 
-  /*thinking about it*/
+    }
+    .section4Shop_2block_photo1_2{
+        flex-direction: column;
 
-   /* {flex-wrap: wrap;}*/
+
+    }
+    .section4Shop_2block_photo3_4{
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    .section4Shop_1block_name_MODNIKY_response{
+        display: block;
+        padding-top: 35px;
+        font: 400 12px Roboto;
+    }
 
 }

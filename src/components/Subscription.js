@@ -36,16 +36,15 @@ export default function Subscription() {
 
   return (
     <>
-      <div className="footer_ContainerForInput">
-
-        {message ? <p>{message}</p> :
+        {message ?<div className="footer_ContainerForInput_message message_color"> <p>{message}</p> </div>:
           <>
-            {error ? <p>{error}</p> : null}
+            {error ? <div className="footer_ContainerForInput_message"> <p>{error}</p> </div>: null}
+            <div className="footer_ContainerForInput">
             <input className="footer_Input" type="text" placeholder="Your email address" onChange={onChange}
                 value={email}/>
           <button className="footer_button" onClick={clickHandler}>JOIN</button>
+            </div>
           </>}
-      </div>
     </>
   )
 }

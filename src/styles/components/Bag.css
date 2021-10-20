@@ -239,12 +239,21 @@
     .col-sm-6 {
         width: 100%;
     }
-
-
-    /*sectionFilters mobile*/
-
-  /*thinking about it*/
-
-   /* {flex-wrap: wrap;}*/
+    .bag_container {
+        margin: 25px 10px;
+    }
+    .bag_remove_container{
+        left: 70%;
+    }
+    .bag_totalCount {
+        font: 500 16px Roboto;
+        line-height: 24px;
+        margin: 35px 0 24px;
+    }
+    .bag_button{
+        font: 400 14px Roboto;
+        height: 40px;
+        width: 220px;
+    }
 
 }

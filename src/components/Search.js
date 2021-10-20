@@ -12,16 +12,14 @@ export default function Search({state, updateState}) {
     updateState({type: 'SEARCH', payload: query});
   }
   const enterHandler = (e) => {
-    console.log(e.keyCode);
     if(e.keyCode === 13) {
       clickHandler();
     }
   }
   return (
     <>
-      <div className="search_container">
-        <input onKeyDown={enterHandler} className="search_input" type="text" placeholder="Search here" value={query} onChange={changeHandler}/>
-        <button className="search_button" onClick={clickHandler}>Search</button>
+      <div className="search_container"><input onKeyDown={enterHandler} className="search_input" type="text" placeholder="Search here" value={query} onChange={changeHandler}/>
+       <button className="search_button" onClick={clickHandler}>Search</button>
       </div>
     </>
   )

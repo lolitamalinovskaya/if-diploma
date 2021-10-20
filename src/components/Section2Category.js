@@ -13,7 +13,7 @@ export const FilterButtonItem = ({className, image, name, updateState, currentTy
     updateState({type: `UPDATE_FILTER`, payload: name})
   }
   return (
-    <div className={currentType===name ? "section2Category_container_items section2Category_active" : "section2Category_container_items"} onClick={clickHandler}>
+    <div className={currentType === name ? "section2Category_container_items section2Category_active" : "section2Category_container_items section2Category_no_active"} onClick={clickHandler}>
       <img src={image} alt={name} className={className}/>
       <p className="dress_name">{name}</p>
     </div>
@@ -27,28 +27,19 @@ export const Section2Category = ({state, updateState}) => {
         <h2 className="section_header">Shop by the Category</h2>
 
         <div className="section2Category_container_ALL_items">
-
           <FilterButtonItem className={`dress_svg`} image={Dress} name={`Dresses`} updateState={updateState} currentType={state.filterType}/>
-
 
           <FilterButtonItem className={`tees_svg`} image={Tees} name={`Tees`} updateState={updateState} currentType={state.filterType}/>
 
-
           <FilterButtonItem className={`Swimwear_svg`} image={Swimwear} name={`Swimwear`} updateState={updateState} currentType={state.filterType}/>
-
 
           <FilterButtonItem className={`Denim_svg`} image={Denim} name={`Denim`} updateState={updateState} currentType={state.filterType}/>
 
-
           <FilterButtonItem className={`Tops_svg`} image={Tops} name={`Tops`} updateState={updateState} currentType={state.filterType}/>
 
-
           <FilterButtonItem className={`Beauty_svg`} image={Beauty} name={`Beauty`} updateState={updateState} currentType={state.filterType}/>
-
         </div>
       </div>
-
-
     </>
   )
 }

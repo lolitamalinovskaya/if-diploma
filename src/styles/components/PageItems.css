@@ -84,22 +84,7 @@
         background-color: #FFFFFF;
         user-select: none;
     }
-    .header_black {
-        color: #000F08;
-    }
-    .Logo-black {
-        width: 235px;
-        height: 25px;
-    }
-    .SearchIconBlack{
-        width: 12px;
-        height: 12px;
-        padding-right: 5px;
-    }
-    .WishListIconBlack {
-        width: 14px;
-        height: 12px;
-    }
+
     .PageItems_container {
         display: flex;
 
@@ -228,30 +213,14 @@
         padding-right: 17px;
     }
     .DecrementIcon_shipping{
-        display: none;
+       width: 7px;
+        height: 1px;
+        padding-right: 17px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 /*mobile */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     :root {
         --col-width: calc(100% * 1 / 6);
     }
@@ -279,12 +248,35 @@
     .col-sm-6 {
         width: 100%;
     }
+    .PageItems_container {
+      padding: unset;
+        flex-flow: column;
+    }
+    .PageImage2_container{
+        display: none;
+    }
+
+    .PageImage1 {
+        width: 100%;
+        height: auto;
+        max-width: unset;
+        min-height: unset;
+        object-fit: fill;
+    }
+    .PageImage1_container{
+        max-width: unset;
+        min-height: unset;
+        display: flex;
+        justify-content: center;
+    }
+    .Page_description {
+
+        padding-left: 40px;
+
+    }
 
 
-    /*sectionFilters mobile*/
 
-  /*thinking about it*/
 
-   /* {flex-wrap: wrap;}*/
 
 }

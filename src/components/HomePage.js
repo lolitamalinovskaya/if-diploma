@@ -8,6 +8,9 @@ import ShoppingCart from '../svg/shopping-cart-icon.svg'
 import Search from "./Search";
 import {Link, Route, useParams} from "react-router-dom";
 import {useState} from "react";
+import {HeaderBag} from "./HeaderBag";
+import {HeaderWishList} from "./HeaderWishlist";
+
 
 
 export const HomePage = ({state, updateState}) => {
@@ -22,39 +25,35 @@ export const HomePage = ({state, updateState}) => {
       <header>
         <div className="header_container">
           <div className="header_container_NEW_ARRIVALS">
-            <div className="header_element">
+            <div className="header_element_p1">
               <p>NEW ARRIVALS</p>
               <img src={Hamburger} alt="hamburger" className="Hamburger"/>
             </div>
-            <div className="header_element">
+            <div className="header_element_p2">
               <p>SHOP</p>
             </div>
-            <div className="header_element">
+            <div className="header_element_p3">
               <p>COLLECTIONS</p>
             </div>
           </div>
-          <div className="header_element">
+          <div className="header_element_logo">
             <img src={Logo} alt="logo" className="Logo"/>
           </div>
-          <div className="header_container_NEW_ARRIVALS">
-            <div onClick={onClick} className="header_element search">
+          <div className="header_container_right_side">
+            <div onClick={onClick} className="header_search_container">
               <img src={SearchIcon} alt="search" className="SearchIcon"/>
-              <p>SEARCH</p>
+              <p className="header_search_p">SEARCH</p>
             </div>
-            { state.user === null ? <Link to={`/signIn`} style={{textDecoration: 'none', color: 'unset', margin: 'unset'}}>
-              <div className="header_element">
-                <p>SIGN IN</p>
-              </div>
-            </Link> :  <div className="header_element" onClick={SignOutHandler}>
-              <p>SIGN OUT</p>
-            </div> }
-            <div className="header_element">
-              <p>BAG (2)</p>
-              <img src={ShoppingCart} alt="ShoppingCart" className="ShoppingCart"/>
-            </div>
-            <div className="header_element">
-              <img src={WishListIcon} alt="wishList" className="WishListIcon"/>
-            </div>
+            {state.user === null ?
+              <Link to={`/signIn`} style={{textDecoration: 'none', color: 'unset', margin: 'unset'}}>
+                <div className="header_element_sign">
+                  <p>SIGN IN</p>
+                </div>
+              </Link> : <div className="header_element_sign_out" onClick={SignOutHandler}>
+                <p>SIGN OUT</p>
+              </div>}
+            <HeaderBag image={ShoppingCart}/>
+            <HeaderWishList image={WishListIcon} />
           </div>
         </div>
       </header>

@@ -96,6 +96,17 @@
         font: 400 12px Roboto;
         margin-top: 16px;
     }
+    .footer_ContainerForInput_message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #D7302D;
+        padding-top: 15px;
+    }
+    .message_color{
+        color: #aaa1c1;
+    }
+
     .footer_ContainerForInput {
         display: flex;
         justify-content: center;
@@ -157,6 +168,9 @@
         height: 12px;
         padding-right: 10px;
     }
+    .IncrementIcon_customer_service, .IncrementIcon_info, .IncrementIcon_follow, .IncrementIcon_contact {
+        display: none;
+    }
 
 }
 
@@ -189,15 +203,73 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 20px;
-        padding-right: 20px;
+    .footer_container {
+        min-height: unset;
+        padding: 0 24px;
+    }
+    .footer_header {
+        font: 400 16px Roboto;
+        margin-top: 40px;
+    }
+    .footer_LabelForInput {
+        margin-top: 10px;
+    }
+    .footer_ContainerForInput {
+
+        padding-top: 15px;
+
     }
 
-    /*section4Shop mobile*/
+    .footer_Input {
+        font: 400 12px Roboto;
+        margin-top: 39px;
+    }
+    .footer_button {
+        font: 400 12px Roboto;
+    }
 
-  /*thinking about it*/
+    li{
+        display: none;
+    }
 
-   /* {flex-wrap: wrap;}*/
+    .footer_lists_container {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 60px;
+        border-top: 1px dashed #D8D8D8;
+
+    }
+    h4 {
+        font: 400 12px Roboto;
+        margin: 24px 0;
+    }
+    .footer_lists_container_1block {
+        margin-right: unset;
+        border-bottom: 1px dashed #D8D8D8;
+        display: flex;
+        align-items: center;
+    }
+    .footer_lists_container_2block, .footer_lists_container_3block {
+        margin-right: unset;
+    }
+
+    .Footer_Li_with_icon {
+        display: none;
+    }
+    .footer_lists_container_2block_div, .footer_lists_container_3block_div, .footer_lists_container_contact_us{
+        border-bottom: 1px dashed #D8D8D8;
+        display: flex;
+        align-items: center;
+    }
+    .IncrementIcon_customer_service, .IncrementIcon_info, .IncrementIcon_follow, .IncrementIcon_contact {
+        display: block;
+        width: 8px;
+        height: 8px;
+        padding-right: 10px;
+    }
+
+
+
+
 
 }

@@ -62,11 +62,16 @@ function App() {
       const sliderStart = state.sliderStart - 4;
       return {...state, sliderStart: Math.max(0, sliderStart)}
     }
-
+    /*if(action.type === "RESIZE") {
+      return {...state, sliderSize: action.payload > 998 ? 4 : 2}
+    }*/
     return state;
-  }, {filterType: `Dresses`}, () => {
-    return {user: localStorage.getItem('user'),filterType: `Dresses`, sliderStart: 0}
+  }, {filterType: undefined}, () => {
+    const width = window.innerWidth;
+    return {user: localStorage.getItem('user'),filterType: undefined, sliderStart: 0, sliderSize: width > 998 ? 4 : 2}
   });
+
+//window.addEventListener('resize', () => setState({type: 'RESIZE', payload: window.innerWidth}))
 
   useEffect(() => {
     fetch('https://modnikky-api.herokuapp.com/api/catalog')
@@ -84,14 +89,18 @@ function App() {
           <Route path={'/product/:id'}> <PageItems state={state} updateState={setState}/> </Route>
           <Route exact path={'/'}>
             <HomePage state={state} updateState={setState}/>
-            { state.searchResult ? <SectionSearch state={state} updateState={setState}/> : null}
-           {/* <Sign />*/}
-            <Section2Category state={state} updateState={setState}/>
-            <SectionFilters state={state} updateState={setState}/>
+          {/*  { state.searchResult ? <SectionSearch state={state} updateState={setState}/> : null}*/}
+
+
+           <Section2Category state={state} updateState={setState}/>
+
+             <SectionFilters state={state} updateState={setState}/>
             <Bag/>
+
             <Section3Modniky state={state} updateState={setState}/>
-            <Section4Shop/>
-            <Footer/>
+
+               <Section4Shop/>
+              <Footer/>
           </Route>
           <Route exact path={'/signIn'}><SignIN state={state} updateState={setState}/></Route>
         </Switch>

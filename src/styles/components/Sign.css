@@ -91,8 +91,8 @@
     }
     .sign_container_window_signIN{
         box-sizing: border-box;
-        width: 500px;
-        height: 350px;
+      /*  width: 500px;
+        height: 350px;*/
         background-color: #FFFFFF;
     }
     .sign_window_content {
@@ -104,7 +104,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 50px;
+        padding-bottom: 35px;
     }
     .sign_window_header {
         font: 400 16px Roboto;
@@ -171,6 +171,11 @@
         cursor: pointer;
         overflow: hidden;
     }
+    .sign_message{
+        color: #D7302D;
+        margin: unset;
+        padding-bottom: 10px;
+    }
     .sign_have_account{
         padding-top: 30px;
         margin: 0;
@@ -180,7 +185,7 @@
 }
 
 /*mobile */
-@media only screen and (max-width: 851px) {
+@media only screen and (max-width: 768px) {
     :root {
         --col-width: calc(100% * 1 / 6);
     }
@@ -208,38 +213,25 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 20px;
-        width: 100%; /*тутчто-то надо делць с респонсом*/
+    .sign_container {
+        max-height: unset;
+        min-height: 100vh;
+        justify-content: space-around;
+    }
+    .sign_container_window_signIN{
+        width: 100%;
     }
 
-    .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 10px;
-        padding-right: 10px;
+    .sign_window_content {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px;
     }
-    .logo {
-        width: 145px;
-        height: 15px;
+    .sign_Input_First_Name{
+        width: unset;
+        max-width: 100%;
     }
-    .header_container_NEW_ARRIVALS {
-        display: none;
-    }
-    /*burger must be here width: 44px;
-        height: 32px;*/
-    .SearchIcon {
-        width: 16px;
-        height: 16px;
-    }
-    /*korzinka must be here width: 27px;
-       height: 32px;*/
-    .WishListIcon {
-        width: 18px;
-        height: 16px;
-    }
-    .header_element p {
-        margin: 20px 0;
-    }
+
+
+
 }

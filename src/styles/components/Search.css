@@ -137,25 +137,25 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container {
+   /* .header_container {
         display: flex;
         align-items: center;
         justify-content: center;
         padding-top: 20px;
-        width: 100%; /*тутчто-то надо делць с респонсом*/
-    }
+        width: 100%; !*тутчто-то надо делць с респонсом*!
+    }*/
 
-    .header_container, .main_container_NEW_COLLECTION {
+ /*   .header_container, .main_container_NEW_COLLECTION {
         padding-left: 10px;
         padding-right: 10px;
-    }
+    }*/
     .logo {
         width: 145px;
         height: 15px;
     }
-    .header_container_NEW_ARRIVALS {
+   /* .header_container_NEW_ARRIVALS {
         display: none;
-    }
+    }*/
     /*burger must be here width: 44px;
         height: 32px;*/
     .SearchIcon {

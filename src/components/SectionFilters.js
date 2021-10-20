@@ -30,7 +30,7 @@ export default function SectionFilters({state, updateState}) {
         <h2 className="sectionFilters_header">{state.filterType}</h2>
 
         <div className="sectionFilters_Item_All_items_container">
-          {items.length > 0 ? items : <div className="SectionFilters_notFound_container"><p className="SectionFilters_notFound">No beauty products found</p></div>}
+          {items.length > 0 ? items : (state.filterType === undefined ? null : <div className="SectionFilters_notFound_container"><p className="SectionFilters_notFound">No beauty products found</p></div>)}
         </div>
 
         {filtered.length > 0 ? <div className="Button_container">

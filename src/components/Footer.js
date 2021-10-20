@@ -4,8 +4,19 @@ import Facebook from '../svg/facebok-logo.svg'
 import Odnoklassniki from '../svg/odonklassniki-logo.svg';
 import Instagram from '../svg/instagram-logo.svg';
 import Subscription from "./Subscription";
+import IncrementIcon from "../svg/expand-icon.svg";
+import {useState} from "react";
 
 export default function Footer() {
+  const [showCustomer, setShowCustomer] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+  const [showFollow, setShowFollow] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
+  const toggleCustomer = () => setShowCustomer(!showCustomer);
+  const toggleInfo = () => setShowInfo(!showInfo);
+  const toggleFollow = () => setShowFollow(!showFollow);
+  const toggleContact = () => setShowContact(!showContact);
 
   return (
     <>
@@ -15,6 +26,7 @@ export default function Footer() {
         <Subscription />
         <div className="footer_lists_container">
           <div className="footer_lists_container_1block">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_customer_service" />
             <h4>CUSTOMER SERVICE</h4>
             <li>CONTACT</li>
             <li>TRACK ORDER</li>
@@ -23,7 +35,8 @@ export default function Footer() {
             <li>MAKE A RETURN</li>
             <li>FAQ</li>
           </div>
-          <div>
+          <div className="footer_lists_container_2block_div">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_info" />
             <h4 className="footer_lists_container_2block">INFO</h4>
             <li>GIFT VOUCHERS</li>
             <li>SIZE GUIDE</li>
@@ -31,7 +44,8 @@ export default function Footer() {
             <li>ABOUT US</li>
             <li>LEGAL POLICIES</li>
           </div>
-          <div>
+          <div className="footer_lists_container_3block_div">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_follow" />
             <h4 className="footer_lists_container_3block">FOLLOW US</h4>
             <div className="Footer_Li_with_icon">
               <img src={Facebook} alt="Facebook" className="Facebook_svg"/>
@@ -46,7 +60,8 @@ export default function Footer() {
               <li>INSTAGRAM</li>
             </div>
           </div>
-          <div>
+          <div className="footer_lists_container_contact_us">
+            <img src={IncrementIcon} alt="IncrementIcon" className="IncrementIcon_contact" />
             <h4>CONTACT US</h4>
             <li>hello@modnikky.com</li>
             <li>+7 910 832 26XX</li>

@@ -41,6 +41,7 @@ export default function Section4Shop() {
             </div>
             <div className="section4Shop_2block_container_for_image">
           <img src={Mask4} alt="Mask4" className="Mask4_svg"/>
+              <p className="section4Shop_1block_name_MODNIKY_response">#MODNIKKY</p>
             </div>
           </div>
         </div>

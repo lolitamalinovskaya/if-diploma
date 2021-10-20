@@ -94,18 +94,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 60px;
-       /* width: 100%; /*тутчто-то надо делць с респонсом*/
+        padding: 30px 60px 0;
     }
 
-    .header_element {
-
-
+    .header_element_p1, .header_element_p2 {
+        padding-right: 40px;
     }
 
     .header_container_NEW_ARRIVALS {
         box-sizing: border-box;
-        min-width: 285px;
+        max-width: 285px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -113,15 +111,26 @@
     .Hamburger, .ShoppingCart{
         display: none;
     }
+    .header_element_logo{
+        display: flex;
+        justify-content: center;
+    }
+    .header_container_right_side{
+        box-sizing: border-box;
+        max-width: 290px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    .search {
+    .header_search_container {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .header_element p {
-        margin: 30px 0;
+    p {
+        margin: unset;
     }
 
     .Logo {
@@ -133,6 +142,15 @@
         width: 14px;
         height: 14px;
         padding-right: 5px;
+    }
+    .header_element_wishlist, .header_element_bag{
+        padding-left: 40px;
+    }
+    .header_element_sign{
+        padding-left: 34px;
+    }
+    .header_element_sign_out{
+       padding-left: 30px;
     }
 
     .WishListIcon {
@@ -177,8 +195,23 @@
     }
 }
 
+@media only screen and (max-width: 992px) {
+    .header_element_p3 {
+        display: none;
+    }
+    .header_element_sign, .header_element_sign_out {
+        display: none;
+    }
+    .header_search_p{
+        display: none;
+    }
+    .main_container_NEW_COLLECTION {
+        margin-top: 170px;
+    }
+}
+
 /*mobile */
-@media only screen and (max-width: 851px) {
+@media only screen and (max-width: 768px) {
    /* :root {
         --col-width: calc(100% * 1 / 6);
     }
@@ -212,7 +245,10 @@
     }
 
     .header_container {
-        padding: 0 10px;
+        padding: 20px 10px 0;
+    }
+    .header_element_p1 p, .header_element_p2, .header_element_p3 {
+        display: none;
     }
 
     .Hamburger, .ShoppingCart{
@@ -221,28 +257,74 @@
     .Hamburger {
         width: 22px;
         height: 16px;
+        fill: #FFFFFF;
     }
-    .ShoppingCart {
-        width: 14px;
-        height: 16px;
+    .header_search_p, .header_element_sign, .header_element_bag_p{
+        display: none;
     }
 
     .Logo {
         width: 145px;
         height: 15px;
     }
+    .header_container_right_side {
+        align-items: baseline;
+    }
+
+    .header_element_bag {
+        padding-left: 20px;
+    }
+    .ShoppingCart {
+        width: 14px;
+        height: 16px;
+    }
 
     .SearchIcon {
         width: 16px;
         height: 16px;
+        padding-right: unset;
+    }
+    .header_element_wishlist{
+        padding-left: 20px;
     }
 
     .WishListIcon {
         width: 18px;
         height: 16px;
     }
+    .main_container_NEW_COLLECTION{
+        justify-content: center;
+        align-items: center;
+        margin-left: unset;
+        margin-top: 360px;
+        background-color: white;
+    }
 
     .main_element_text, h1, .main_element_button{
-        display: none;
+      color: black;
+    }
+
+    h1{
+        font: 700 32px Roboto;
+        line-height: 38px;
+        padding-top: 40px;
+        max-width: 190px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_element_text{
+        font: 400 12px Roboto;
+        line-height: 18px;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .main_element_button {
+        font: 400 14px Roboto;
+        color: black;
+        height: 40px;
+        width: 220px;
+        border: 1px solid black;
     }
 }

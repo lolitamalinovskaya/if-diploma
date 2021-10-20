@@ -104,6 +104,7 @@
         top: 15rem; /*calc(100% - 20px);*/
         z-index: 2;
     }
+
     .arrow_right {
         width: 50px;
         height: 50px;
@@ -123,7 +124,7 @@
     .section3Modniky_container_ALL_items{
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: baseline;
       /*  justify-content: space-between;*/
         flex-grow: 1;
         flex-shrink: 1;
@@ -257,6 +258,7 @@
 }
 
 /*mobile */
+
 @media only screen and (max-width: 900px) {
     :root {
         --col-width: calc(100% * 1 / 6);
@@ -285,24 +287,35 @@
     .col-sm-6 {
         width: 100%;
     }
-    .header_container, .main_container_NEW_COLLECTION {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    .responce {max-width: 900px;}
 
-    /*section2Category mobile*/
 
     .section_header {
-        margin: 80px 0 0;
-        font: 400 64px Roboto;
-        display: flex;
-        justify-content: center;
+        margin: 40px 0 0;
+        font: 400 32px Roboto;
     }
 
     .section3Modniky_container{
-        padding: 0 50px;
+        padding: 0 25px;
+        min-height: unset;
+
+    }
+    .arrow_position_right { /*fix this*/
+        position: absolute;
+        right: -1%;
+        top: 15rem; /*calc(100% - 20px);*/
+        z-index: 2;
+    }
+    .arrow_right, .arrow_left  {
+        width: 32px;
+        height: 32px;
+    }
+    .section3Modniky_Item:nth-child(2n){
+        display: none;
     }
 
-    {flex-wrap: wrap;}
+
+
+
 
 }

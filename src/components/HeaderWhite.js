@@ -1,39 +1,46 @@
 import React from "react";
 import '../styles/components/HeaderWhite.css';
 import LogoBlack from "../svg/brand-logo-black.svg";
-import SearchIconBlack from "../svg/search-icon-black.svg";
 import WishListIconBlack from "../svg/wishlist-black.svg";
+import HamburgerBlack from "../svg/hamburger-menu-icon-black.svg";
+import Logo from "../svg/brand-logo.svg";
+import SearchIcon from "../svg/search-icon.svg";
+import {Link} from "react-router-dom";
+import ShoppingCart from '../svg/shopping-cart-icon.svg'
+import ShoppingCartBlack from '../svg/shopping-cart-icon-black.svg'
+import {HeaderBag} from "./HeaderBag";
+import {HeaderWishList} from "./HeaderWishlist";
+import WishlistBlack from "../svg/wishlist-black.svg"
 
 
 export default function HeaderWhite() {
+
+
   return(
     <>
-        <header className="header_black">
-          <div className="header_container">
-            <div className="header_container_NEW_ARRIVALS">
-              <div className="header_element">
-                <p>NEW ARRIVALS</p>
-              </div>
-              <div className="header_element">
-                <p>SHOP</p>
-              </div>
-              <div className="header_element">
-                <p>COLLECTIONS</p>
-              </div>
+      <header className="header_container_black">
+        <div className="header_container">
+          <div className="header_container_NEW_ARRIVALS">
+            <div className="header_element_p1">
+              <p>NEW ARRIVALS</p>
+              <img src={HamburgerBlack} alt="hamburger" className="HamburgerBlack"/>
             </div>
-            <div className="header_element_logo">
-              <img src={LogoBlack} alt="logo" className="Logo-black"/>
+            <div className="header_element_p2">
+              <p>SHOP</p>
             </div>
-            <div className="header_container_NEW_ARRIVALS_white">
-              <div className="header_element">
-                <p>BAG (2)</p>
-              </div>
-              <div className="header_element">
-                <img src={WishListIconBlack} alt="wishList" className="WishListIconBlack"/>
-              </div>
+            <div className="header_element_p3">
+              <p>COLLECTIONS</p>
             </div>
           </div>
-        </header>
+          <div className="header_element_logo">
+            <img src={LogoBlack} alt="logo" className="Logo"/>
+          </div>
+          <div className="header_container_right_side">
+            <HeaderBag image={ShoppingCartBlack}/>
+            <HeaderWishList image={WishlistBlack}/>
+          </div>
+        </div>
+      </header>
     </>
   )
 }

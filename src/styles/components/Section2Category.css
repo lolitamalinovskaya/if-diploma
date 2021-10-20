@@ -111,10 +111,13 @@
         background-color: #aaa1c1;
         transition: .1s background-color;
     }
+     .section2Category_no_active {
+        background-color: #ede7f0;
+    }
+
     .section2Category_active {
         background-color: #aaa1c1;
     }
-
 
     .section2Category_container_items:last-child {
         margin-right: 0;
@@ -149,10 +152,9 @@
     }
 
 }
-
 /*mobile одправить респонс размер*/
-@media only screen and (max-width: 851px) {
-    :root {
+@media only screen and (max-width: 1220px) {
+   /* :root {
         --col-width: calc(100% * 1 / 6);
     }
 
@@ -165,7 +167,7 @@
     }
 
     .col-sm-3 {
-        width: calc(var(--col-width) * 3); /* 50% */
+        width: calc(var(--col-width) * 3); !* 50% *!
     }
 
     .col-sm-4 {
@@ -178,32 +180,33 @@
 
     .col-sm-6 {
         width: 100%;
-    }
-    .header_container, .main_container_NEW_COLLECTION {
+    }*/
+  /*  .header_container, .main_container_NEW_COLLECTION {
         padding-left: 10px;
         padding-right: 10px;
-    }
+    }*/
 
     /*section2Category mobile*/
 
     .section_header {
-        margin: 40px 0 0;
+        margin: 275px 0 0;
         font: 400 32px Roboto;
-        display: flex;
-        justify-content: center;
     }
 
     .section2Category_container{
-        padding: 0 50px;
+        padding: 0 25px 0;
     }
     .section2Category_container_items {
-        width: 180px;
-        height: 80px;
-        margin-bottom: 20px;
+        max-width: 180px;
+        max-height: 80px;
+        margin: 0 0 20px;
     }
     .section2Category_container_ALL_items{
         flex-wrap: wrap;
         margin-top: 40px;
+    }
+    .section2Category_container_items:last-child{
+        margin-right: unset;
     }
     .dress_svg {
         width: 25px;
@@ -211,7 +214,7 @@
     }
     .dress_name {
         font: 400 21px Roboto;
-        padding-left: 25px;
+        padding-left: 15px;
     }
     .tees_svg { /**/
         width: 40px;
@@ -234,5 +237,15 @@
         height: 40px;
     }
 
+
+}
+@media only screen and (max-width: 768px) {
+    .section2Category_container{
+        padding: 25px 25px 0;
+    }
+    .section2Category_container_items {
+        width: 170px;
+        height: 70px;
+    }
 
 }
