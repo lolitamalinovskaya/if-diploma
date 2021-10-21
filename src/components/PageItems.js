@@ -2,6 +2,8 @@ import React from "react";
 import '../styles/components/PageItems.css';
 import Footer from "./Footer";
 import WishlistIcon from "../svg/wishlist-icon.svg";
+import WishlistIconRed from "../svg/wishlist-icon-red.svg";
+import WishlistIconWhite from "../svg/heart.svg";
 import DecrementIcon from "../svg/collapse-icon.svg";
 import IncrementIcon from "../svg/expand-icon.svg"
 import HeaderWhite from "./HeaderWhite";
@@ -30,9 +32,16 @@ export default function PageItems({state, updateState}) {
   if(item === undefined) {
     return <Redirect to={'/'}/>
   }
+  const onClick = () => {updateState({type: "ADD_TO_CART", payload: id})}
+
+  const isAdded = state.cart !== null && state.cart.includes(id);
+
+  const isFavorite = (state.favorite || []).includes(id);
+
+  const onClickFavorite = () => {updateState({type: isFavorite ? "REMOVE_FROM_FAVORITE" :"ADD_TO_FAVORITE", payload: id})}
   return (
     <>
-      <HeaderWhite />
+      <HeaderWhite state={state}/>
       <div className="PageItems_container">
         <div className="PageImage1_container">
           <img src={item.images[0]} alt="PageImage1" className="PageImage1" />
@@ -53,8 +62,8 @@ export default function PageItems({state, updateState}) {
           <p className="page_size_header">SIZE</p>
           <Sizes sizes={item.availableSizes}/>
           <div className="pages_container">
-          <button className="page_button">ADD TO BAG</button>
-          <button className="page_button_wishlist"> <img src={WishlistIcon} alt="wishList" className="WishListIcon"/></button>
+          <button className="page_button" onClick={onClick}>{isAdded ? `ADDED` : `ADD TO BAG`}</button>
+          <button className="page_button_wishlist" onClick={onClickFavorite}> <img src={isFavorite ? WishlistIconWhite : WishlistIcon} alt="wishList" className="WishListIcon"/></button>
           </div>
 
           <div className="description_container">

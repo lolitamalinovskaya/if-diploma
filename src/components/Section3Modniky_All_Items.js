@@ -17,7 +17,7 @@ export default function Section3Modniky_All_Items({state, updateState, response}
     const image = el.images[0]
     const name = el.name;
 
-    return <Link to={`/product/${el.id}`} style={{textDecoration: 'none', color: 'unset', margin: 'unset', width: '25%'}}><Section3Modniky_1_Item price={price} priceBeforeSale={priceBeforeSale} sale={17} imageURL={image} name={name}/></Link>
+    return <Link to={`/product/${el.id}`} style={{textDecoration: 'none', color: 'unset', margin: 'unset', width: '25%'}}><Section3Modniky_1_Item price={price} priceBeforeSale={priceBeforeSale} sale={17} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/></Link>
   })
 
   return (

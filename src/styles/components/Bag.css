@@ -20,61 +20,6 @@
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
 @media (max-width: 2880px) {
-    /*.col-md-1 {
-        width: var(--one-col-width);
-    }
-
-    .col-md-2 {
-        width: calc(var(--one-col-width) * 2);
-    }
-
-    .col-md-3 {
-        width: calc(var(--one-col-width) * 3);
-    }
-
-    .col-md-4 {
-        width: calc(var(--one-col-width) * 4);
-    }
-
-    .col-md-5 {
-        width: calc(var(--one-col-width) * 5);
-    }
-
-    .col-md-6 {
-        width: calc(var(--one-col-width) * 6);
-    }
-
-    .col-md-7 {
-        width: calc(var(--one-col-width) * 7); !*50%*!
-    }
-
-    .col-md-8 {
-        width: calc(var(--one-col-width) * 8);
-    }
-
-    .col-md-9 {
-        width: calc(var(--one-col-width) * 9);
-    }
-
-    .col-md-10 {
-        width: calc(var(--one-col-width) * 10);
-    }
-
-    .col-md-11 {
-        width: calc(var(--one-col-width) * 11);
-    }
-
-    .col-md-12 {
-        width: calc(var(--one-col-width) * 12);
-    }
-
-    .col-md-13 {
-        width: calc(var(--one-col-width) * 13);
-    }
-
-    .col-md-14 {
-        width: 100%; */
-
    .bag_container {
        user-select: none;
        display: flex;
@@ -86,7 +31,8 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #D8D8D8;
 
     }
     .bag_header_bag{
@@ -101,7 +47,7 @@
         margin: 0;
     }
     .bag_content_container{
-         border-top: 1px solid #D8D8D8;
+
          padding-top: 30px;
          display: flex;
          padding-bottom: 85px;
@@ -154,6 +100,7 @@
         position: absolute;
         bottom: -30%;
         left: 85%;
+        cursor: pointer;
     }
     .bag_remove_svg{
         width: 12px;
@@ -162,6 +109,21 @@
     }
     .bag_remove{
         margin: 0;
+    }
+    .bag_message{
+        font: 500 18px Roboto;;
+        color: #aaa1c1;
+        padding: 80px 0;
+    }
+    .bag_add_button{
+        font: 400 14px Roboto;
+        color: #FFFFFF;
+        border: none;
+        outline: none;
+        background-color: #aaa1c1;
+        cursor: pointer;
+        overflow: hidden;
+        margin-top: 20px;
     }
     .bag_totalCount_container{
         display: flex;
@@ -189,6 +151,9 @@
     .bag_visa{
         display: flex;
     }
+    .favorites_bag_visa{
+        padding-top: 15px;
+    }
     .bag_mastercard_svg{
         width: 40px;
         height: 24px;
@@ -198,16 +163,6 @@
         width: 40px;
         height: 24px;
     }
-
-
-
-
-
-
-
-
-
-
 }
 
 /*mobile */

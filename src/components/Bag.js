@@ -1,52 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 import '../styles/components/Bag.css';
 import Footer from "./Footer";
 import HeaderWhite from "./HeaderWhite";
-import insta1 from "../images/insta1.jpg";
-import Dropdown from "../svg/dropdown-icon.svg"
-import Remove from "../svg/remove-icon.svg"
-import MasterCard from "../svg/maestro-logo.svg"
-import Visa from "../svg/visa-logo.svg"
+import MasterCard from "../svg/maestro-logo.svg";
+import Visa from "../svg/visa-logo.svg";
+import Bag1_item from "./Bag_1item";
 
+export default function Bag({state, updateState}) {
 
-export default function Bag() {
+  const [message, setMessage] = useState(undefined);
+
+  const cart = state.cart === null ? [] : state.cart;
+  const values = (state.data || []).filter((e) => cart.includes(e.id));
+  const items = values.map((e) => <Bag1_item state={state} updateState={updateState} key={e.id} item={e}/>);
+
+  const price = Number(values.map((e) => +e.price.value).reduce((a, b) => a + b, 0) / 100).toFixed(2);
+  const currency = values.length > 0 ? values[0].price.currency : '';
+
+  const onClick = () => {
+    if (cart.length !== 0){
+      fetch('https://modnikky-api.herokuapp.com/api/cart', {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({products: cart})
+      }).then((e) => e.json()).then((e) => {
+        setMessage(e.message);
+        updateState({type: "CLEAR_CART"})
+      }).catch(() => setMessage('Failed to proceed'))
+    }
+  }
 
   return (
     <>
-      <HeaderWhite/>
+      <HeaderWhite state={state}/>
       <div className="bag_container">
         <div className="bag_header">
           <h5 className="bag_header_bag">BAG</h5>
-          <p className="bag_header_items">2 items</p>
+          <p className="bag_header_items">{values.length} items</p>
         </div>
-        <div className="bag_content_container">
-          <div className="bag_image_container">
-            <img src={insta1} className="bag_image"/>
-          </div>
-          <div className="bag_description_container">
-            <h5 className="bag_description">WHITE BEAUTY MRS BLONDES MID LENGTH DENIM SHORT</h5>
-            <p className="bag_price">USD $340.00</p>
-            <div className="bag_color_container">
-              <p className="bag_color">COLOR: WHITE</p>
-              <img src={Dropdown} className="bag_dropdown_svg"/>
-            </div>
-            <div className="bag_size_container">
-              <p className="bag_color">SIZE: 2</p>
-              <img src={Dropdown} className="bag_dropdown_svg"/>
-            </div>
-            <div className="bag_size_container">
-              <p className="bag_color">QUANTITY: 1</p>
-              <img src={Dropdown} className="bag_dropdown_svg"/>
-            </div>
-            <div className="bag_remove_container">
-              <img src={Remove} className="bag_remove_svg"/>
-              <p className="bag_remove">REMOVE</p>
-            </div>
-          </div>
-        </div>
+        {items}
         <div className="bag_totalCount_container">
-          <p className="bag_totalCount">Total USD $490.00</p>
-          <button className="bag_button">PROCEED TO CHECKOUT</button>
+          {cart.length > 0 ? <p className="bag_totalCount">Total {currency} {price}</p> : null}
+          {message ? <p className="bag_message">{message}</p> : null}
+          {cart.length > 0 ? <button className="bag_button" onClick={onClick}>PROCEED TO CHECKOUT</button> : null}
           <div className="bag_visa">
             <img src={MasterCard} className="bag_mastercard_svg"/>
             <img src={Visa} className="bag_visa_svg"/>

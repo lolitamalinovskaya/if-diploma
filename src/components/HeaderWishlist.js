@@ -1,8 +1,5 @@
 import React from "react";
-
-
 import '../styles/components/HomePage.css';
-import WishListIcon from "../svg/wishlist-icon.svg";
 
 export const HeaderWishList = ({image}) => {
   return (

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import '../styles/components/Footer.css';
 
-
 export default function Subscription() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState(undefined);
@@ -32,7 +31,6 @@ export default function Subscription() {
     }
     setError('Please enter a valid email');
   }
-
 
   return (
     <>

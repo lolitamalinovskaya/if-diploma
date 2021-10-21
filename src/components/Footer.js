@@ -5,18 +5,8 @@ import Odnoklassniki from '../svg/odonklassniki-logo.svg';
 import Instagram from '../svg/instagram-logo.svg';
 import Subscription from "./Subscription";
 import IncrementIcon from "../svg/expand-icon.svg";
-import {useState} from "react";
 
 export default function Footer() {
-  const [showCustomer, setShowCustomer] = useState(false);
-  const [showInfo, setShowInfo] = useState(false);
-  const [showFollow, setShowFollow] = useState(false);
-  const [showContact, setShowContact] = useState(false);
-
-  const toggleCustomer = () => setShowCustomer(!showCustomer);
-  const toggleInfo = () => setShowInfo(!showInfo);
-  const toggleFollow = () => setShowFollow(!showFollow);
-  const toggleContact = () => setShowContact(!showContact);
 
   return (
     <>

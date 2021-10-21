@@ -19,17 +19,20 @@ export default function Sign() {
             <input className="sign_Input_First_Name" type="text" placeholder="Email"/>
             <input className="sign_Input_First_Name" type="password" placeholder="Password"/>
             <div className="sign_Input_checkbox_container">
-              <input type="checkbox" className="sign_Input_checkbox" />
-              <label className="sign_label_checkbox">Let's get personal! We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions. No nasties.</label>
+              <input type="checkbox" className="sign_Input_checkbox"/>
+              <label className="sign_label_checkbox">Let's get personal! We'll send you only the good stuff: Exclusive
+                early access to Sale, new arrivals and promotions. No nasties.</label>
             </div>
-            <p className="sign_agree">By signing up you agree to <span className="sign_agree_underline">Terms of Service</span> and <span className="sign_agree_underline">Privacy Policy</span></p>
+            <p className="sign_agree">By signing up you agree to <span
+              className="sign_agree_underline">Terms of Service</span> and <span className="sign_agree_underline">Privacy Policy</span>
+            </p>
             <div className="sign_button_container">
-            <button className="sign_button">SIGN UP</button>
+              <button className="sign_button">SIGN UP</button>
             </div>
             <p className="sign_have_account">I HAVE AN ACCOUNT</p>
           </div>
         </div>
       </div>
     </>
-)
+  )
 }
