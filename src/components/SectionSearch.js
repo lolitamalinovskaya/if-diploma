@@ -17,7 +17,7 @@ export default function SectionSearch({state, updateState}) {
 
     const image = el.images[0];
     const name = el.name;
-    return <Link to={`/product/${el.id}`} style={{textDecoration: 'none', color: 'unset', margin: 'unset', width: '25%'}}><Section3Modniky_1_Item price={price} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/></Link>
+    return <Section3Modniky_1_Item price={price} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/>
   })
   return (
     <>

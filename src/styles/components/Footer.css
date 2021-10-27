@@ -119,7 +119,7 @@
 }
 
 /*mobile */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .footer_container {
         min-height: unset;
         padding: 0 24px;

@@ -29,7 +29,7 @@
     }
     .section2Category_container {
         box-sizing: border-box;
-        min-height: 395px;
+        min-height: 300px;
         padding: 0 105px;
         background-color: #FFFFFF;
     }
@@ -49,11 +49,11 @@
         height: 90px;
         background-color: #ede7f0;
         margin-right: 12px;
-        transition: .1s background-color;
+        transition: .3s background-color;
     }
     .section2Category_container_items:hover{
         background-color: #aaa1c1;
-        transition: .1s background-color;
+        transition: .3s background-color;
     }
      .section2Category_no_active {
         background-color: #ede7f0;
@@ -151,8 +151,8 @@
     .section2Category_container{
         padding: 25px 25px 0;
     }
-    .section2Category_container_items {
+   /* .section2Category_container_items {
         width: 170px;
         height: 70px;
-    }
+    }*/
 }

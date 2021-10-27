@@ -57,7 +57,7 @@ export const HomePage = ({state, updateState}) => {
             </div>
           </div>
         </header>
-        {showSearch ? <Search state={state} updateState={updateState}/> : null}
+        {showSearch ? <Search state={state} updateState={updateState} setShowSearch={setShowSearch}/> : null}
         <main className="main_container">
           <div className="main_container_NEW_COLLECTION">
             <h1>NEW COLLECTION</h1>

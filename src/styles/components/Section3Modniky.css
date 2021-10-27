@@ -148,12 +148,12 @@
     }
 
     .Like_svg {
-        right: 12px;
         width: 31px;
         height: 28px;
         position: absolute;
         z-index: 2;
-        top: 12px;
+        top: 3%;
+        left: 81%;
     }
     .Sale {
         box-sizing: border-box;
@@ -173,6 +173,10 @@
     .Items_name {
         font: 400 18px Roboto;
         padding-top: 15px;
+    }
+    .Items_name:hover{
+        color: #8275ac;
+        transition: all 0.25s ease-out;
     }
     .Chain_Prices {
         display: flex;
@@ -206,16 +210,51 @@
 
     }
     .arrow_position_right { /*fix this*/
-        position: absolute;
-        right: -1%;
-        top: 15rem; /*calc(100% - 20px);*/
-        z-index: 2;
+        right: -2%;
+        top: 9rem; /*calc(100% - 20px);*/
     }
     .arrow_right, .arrow_left  {
         width: 32px;
         height: 32px;
     }
-    .section3Modniky_Item:nth-child(2n){
+    .arrow_position_left {
+        left: -4%;
+        top: 9rem;
+        z-index: 2;
+    }
+    .Items_name{
+        flex-wrap: wrap;
+        font: 400 16px Roboto;
+    }
+    .section3Modniky_Item_Card:hover::before, .ImageOfCatalog_btn {
         display: none;
     }
+    .section3Modniky_Item_Card:hover .ImageOfCatalog_btn {
+        display: none;
+    }
+    .section3Modniky_Item_Card:nth-child(2n) {
+        display: none;
+    }
+    .Sale {
+        box-sizing: border-box;
+        width: 25px;
+        height: 15px;
+        font: 400 8px Roboto;
+        bottom: 4px;
+        left: 0;
+    }
+    .section3Modniky_container_ALL_items{
+        margin-bottom: unset;
+        margin-top: 40px;
+    }
+    .Price, .PriceBeforeSale {
+        font: 500 16px Roboto; /*bold 700 problems*/
+    }
+    .Like_svg {
+        width: 17px;
+        height: 15px;
+        top: 1rem;
+        right: 1rem;
+    }
+
 }

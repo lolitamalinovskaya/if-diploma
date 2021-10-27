@@ -40,14 +40,14 @@
         margin-top: 80px;
       /*  justify-content: space-between;*/
     }
-    .Like_svg {
+  /*  .Like_svg {
         position: absolute;
         right: 12px;
         width: 31px;
         height: 28px;
         z-index: 2;
         top: 12px;
-    }
+    }*/
     .ImageOfCatalog {
         width: 100%;
         height: 100%;
@@ -94,5 +94,57 @@
 
 /*mobile */
 @media only screen and (max-width: 900px) {
+    .SectionFilters_container {
+        box-sizing: border-box;
+        padding: 0 25px;
+        background-color: #FFFFFF;
+    }
+    .sectionFilters_header {
+        margin: 70px 0 0;
+        font: 400 30px Roboto;
+    }
+    .sectionFilters_Item_All_items_container {
+        margin-bottom: unset;
+        margin-top: 40px;
+        flex-wrap: wrap;
 
+    }
+    .ImageOfCatalog {
+        width: 100%;
+        height: 100%;
+        max-width: 180px;
+        max-height: 240px;
+        object-fit: fill;
+    }
+
+    .section3Modniky_Item {
+        flex-basis: 50%;
+        margin-bottom: 15px;
+
+    }
+    .section3Modniky_Item_Card{
+      /*  position: unset;*/
+        max-width: unset;
+        max-height: unset;
+        width: 100%;
+    }
+    .Filter_Price{
+        font: 500 16px Roboto;
+    }
+    .Items_name{
+        display: flex;
+        flex-wrap: wrap;
+        font: 400 16px Roboto;
+    }
+
+
+
+}
+@media only screen and (max-width: 700px) {
+    .sectionFilters_Item_All_items_container {
+
+    }
+    .Like_svg{
+        left: 80%;
+    }
 }
