@@ -22,7 +22,6 @@
 @media (max-width: 2880px) {
     .PageItems_container {
         box-sizing: border-box;
-       /* min-height: 1440px;*/
         padding: 0 60px 0 0;
         background-color: #FFFFFF;
         user-select: none;
@@ -30,7 +29,6 @@
 
     .PageItems_container {
         display: flex;
-
     }
     .PageImage1_container, .PageImage2_container {
         max-width: 540px;
@@ -169,6 +167,7 @@
       padding: unset;
         flex-flow: column;
     }
+
     .PageImage2_container{
         display: none;
     }
@@ -186,9 +185,8 @@
         display: flex;
         justify-content: center;
     }
+
     .Page_description {
-
         padding-left: 40px;
-
     }
 }

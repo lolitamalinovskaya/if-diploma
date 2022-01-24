@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/components/HeaderWhite.css';
+
 import LogoBlack from "../svg/brand-logo-black.svg";
 import HamburgerBlack from "../svg/hamburger-menu-icon-black.svg";
 import {Link} from "react-router-dom";
@@ -8,6 +8,7 @@ import {HeaderBag} from "./HeaderBag";
 import {HeaderWishList} from "./HeaderWishlist";
 import WishlistBlack from "../svg/wishlist-black.svg";
 
+import '../styles/components/HeaderWhite.css';
 
 export default function HeaderWhite({state}) {
 
@@ -33,8 +34,7 @@ export default function HeaderWhite({state}) {
             </div>
           </Link>
           <div className="header_container_right_side">
-            <Link to={'/bag'} style={{textDecoration: 'none', color: 'black'}}><HeaderBag image={ShoppingCartBlack}
-                                                                                          state={state}/></Link>
+            <Link to={'/bag'} style={{textDecoration: 'none', color: 'black'}}><HeaderBag image={ShoppingCartBlack} state={state}/></Link>
             <Link to={'/favorite'}><HeaderWishList image={WishlistBlack}/></Link>
           </div>
         </div>

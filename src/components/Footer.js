@@ -1,10 +1,12 @@
 import React from "react";
-import '../styles/components/Footer.css';
+
 import Facebook from '../svg/facebok-logo.svg'
 import Odnoklassniki from '../svg/odonklassniki-logo.svg';
 import Instagram from '../svg/instagram-logo.svg';
 import Subscription from "./Subscription";
 import IncrementIcon from "../svg/expand-icon.svg";
+
+import '../styles/components/Footer.css';
 
 export default function Footer() {
 

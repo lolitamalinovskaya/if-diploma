@@ -13,7 +13,9 @@ import {HeaderWishList} from "./HeaderWishlist";
 
 
 export const HomePage = ({state, updateState}) => {
+
   const [showSearch, setShowSearch] = useState(false);
+
   const onClick = () => setShowSearch(!showSearch);
 
   const SignOutHandler = () => updateState({type: 'LOGOUT'})
