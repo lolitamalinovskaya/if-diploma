@@ -10,9 +10,11 @@ import {Link, Route, useParams} from "react-router-dom";
 import {useState} from "react";
 import {HeaderBag} from "./HeaderBag";
 import {HeaderWishList} from "./HeaderWishlist";
+import {useAppState} from "./App";
 
 
-export const HomePage = ({state, updateState}) => {
+export const HomePage = () => {
+  const {state, updateState} = useAppState();
 
   const [showSearch, setShowSearch] = useState(false);
 

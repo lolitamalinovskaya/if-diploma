@@ -19,12 +19,14 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 2880px) {
+/*@media (max-width: 2880px) {*/
    .section4Shop_container {
         box-sizing: border-box;
         min-height: 820px;
-        padding: 0 100px;
+        padding: 0 60px;
         background-color: #FFFFFF;
+        max-width: 2600px;
+        margin: 0 auto;
     }
     .section4Shop_container_flex_for_block {
         display: flex;
@@ -38,7 +40,7 @@
         display: flex;
         flex-direction: column;
 
-        margin: 80px auto 0;
+        margin: 80px 0 0;
         /*
         max-width: calc(100% - var(--one-col-width) * 2);
         */
@@ -119,13 +121,15 @@
         display: none;
     }
 
-}
+/*}*/
 
 /*mobile */
 @media only screen and (max-width: 1300px) {
     .section4Shop_container{
-        padding: 0 4px;
+        padding: 0 10px;
         min-height: unset;
+        max-width: none;
+        min-width: 320px;
     }
     .section4Shop_container_flex_for_block {
         flex-wrap: wrap;
@@ -155,7 +159,7 @@
         max-height: unset;
         width: 100%;
         height: auto;
-        min-width: 410px;
+        min-width: 100%;
         object-fit: fill;
     }
     .Mask_svg{
@@ -168,7 +172,7 @@
          max-height: unset;
          width: 100%;
          height: auto;
-         min-width: 410px;
+         min-width: 100%;
          object-fit: cover;
     }
     .section4Shop_1block_name_MODNIKY {

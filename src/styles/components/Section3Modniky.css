@@ -19,7 +19,7 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 2880px) {
+/*@media (max-width: 2880px) {*/
     .section_header {
         margin: 90px 0 0;
         font: 400 34px Roboto;
@@ -30,8 +30,10 @@
     .section3Modniky_container {
         box-sizing: border-box;
         min-height: 710px;
-        padding: 0 100px;
+        padding: 0 60px;
         background-color: #FFFFFF;
+        max-width: 2600px;
+        margin: 0 auto;
     }
     .spinner_container {
         display: flex;
@@ -65,26 +67,29 @@
         transform: rotate(180deg);
     }
 
-    .section3Modniky_container_ALL_items{
+    .section3Modniky_container_ALL_items {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-      /*  justify-content: space-between;*/
-        flex-grow: 1;
+        justify-content: space-between;
+     /*   flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: 25%;
+        flex-basis: 25%;*/
         margin-bottom: 45px;
         margin-top: 80px;
     }
     /*общий чилдрен */
     .section3Modniky_Item {
+        max-width: 320px;
+        width: 20%;
+        flex: 1 0 20%;
      /*   margin-right: 0.5rem;*/
         margin-bottom: 45px;
      /*   width: 25%;*/
        /* box-sizing: border-box;*/
-        flex-grow: 1;
+/*        flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: 25%;
+        flex-basis: 25%;*/
      /*   width: 25%;*/
       /*  flex-grow: 1;
         flex-shrink: 1;
@@ -93,12 +98,12 @@
 
     .section3Modniky_Item_Card {
         position: relative;
-        max-width: 300px;
+        max-width: 320px;
         max-height: 400px;
-        margin-right: 0.7rem;
+    /*   margin-right: 0.7rem;*/
     }
     .section3Modniky_Item_Card:last-child {
-        margin-right: 0;
+      /*  margin-right: 0;*/
     }
 
     .section3Modniky_Item_Card::before {
@@ -142,7 +147,7 @@
     .ImageOfCatalog{
         width: 100%;
         height: 100%;
-        max-width: 300px;
+        max-width: 320px;
         max-height: 400px;
         object-fit: fill;
     }
@@ -173,6 +178,10 @@
     .Items_name {
         font: 400 18px Roboto;
         padding-top: 15px;
+/*        width: 300px;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;*/
     }
     .Items_name:hover{
         color: #8275ac;
@@ -194,7 +203,7 @@
         color: #D7302D;
         font: 700 20px Roboto; /*bold 700 problems*/
     }
-}
+/*}*/
 
 /*mobile */
 
@@ -207,7 +216,8 @@
     .section3Modniky_container{
         padding: 0 25px;
         min-height: unset;
-
+        max-width: none;
+        min-width: 320px;
     }
     .arrow_position_right { /*fix this*/
         right: -2%;

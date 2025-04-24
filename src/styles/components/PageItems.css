@@ -19,7 +19,7 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 2880px) {
+
     .PageItems_container {
         box-sizing: border-box;
         padding: 0 60px 0 0;
@@ -31,14 +31,13 @@
         display: flex;
     }
     .PageImage1_container, .PageImage2_container {
-        max-width: 540px;
-        min-height: 812px;
+        min-height: 740px;
+        max-height: 740px;
     }
     .PageImage1, .PageImage2 {
         width: 100%;
         height: 100%;
-        max-width: 540px;
-        min-height: 812px;
+        object-fit: cover;
     }
     .Page_description {
         display: flex;
@@ -159,7 +158,6 @@
         height: 1px;
         padding-right: 17px;
     }
-}
 
 /*mobile */
 @media only screen and (max-width: 1200px) {
@@ -181,7 +179,7 @@
     }
     .PageImage1_container{
         max-width: unset;
-        min-height: unset;
+        min-height: 100%;
         display: flex;
         justify-content: center;
     }

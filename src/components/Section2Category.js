@@ -6,6 +6,7 @@ import Swimwear from '../svg/swimwear.svg';
 import Denim from '../svg/denim.svg';
 import Tops from '../svg/tops.svg';
 import Beauty from '../svg/beauty.svg';
+import {useAppState} from "./App";
 
 export const FilterButtonItem = ({className, image, name, updateState, currentType}) => {
 
@@ -20,7 +21,9 @@ export const FilterButtonItem = ({className, image, name, updateState, currentTy
   )
 }
 
-export const Section2Category = ({state, updateState}) => {
+export const Section2Category = () => {
+  const {state, updateState} = useAppState();
+
   return (
     <>
       <div className="section2Category_container">

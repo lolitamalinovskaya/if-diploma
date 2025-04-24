@@ -25,11 +25,12 @@ export default function Section3Modniky_1_Item({imageURL, price, priceBeforeSale
         {sale > 0 ? <div className="Sale">{sale}%</div> : null}
       </div>
       <Link to={`/product/${id}`} style={{textDecoration: 'none', color: 'unset', margin: 'unset'}}><div className="Items_name">
-        {name}
-      </div></Link>
+        { name.length > 50 ? name.slice(0, 50) + '...' : name }
+      </div>
+      </Link>
       <div className="Chain_Prices">
-        {priceBeforeSale ? <p className="PriceBeforeSale">${Number(priceBeforeSale).toFixed(2)}</p> : null}
-        <p className={priceBeforeSale ? "Price" : "Filter_Price"}>${Number(price).toFixed(2)}</p>
+        {priceBeforeSale ? <p className="PriceBeforeSale">{Number(priceBeforeSale).toFixed(2)} €</p> : null}
+        <p className={priceBeforeSale ? "Price" : "Filter_Price"}>{Number(price).toFixed(2)} €</p>
       </div>
     </div>
       </>

@@ -19,7 +19,7 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 1440px) {
+/*@media (max-width: 1440px) {*/
     .search_container {
         display: flex;
         align-items: flex-end;
@@ -61,7 +61,7 @@
         border-left: none;
     }
 
-}
+/*}*/
 
 /*mobile */
 @media only screen and (max-width: 900px) {
