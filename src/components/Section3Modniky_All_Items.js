@@ -11,13 +11,13 @@ export default function Section3Modniky_All_Items({state, updateState, response}
   const data = state.data || []
   const items = [...data].splice(sliderStart, state.sliderSize).map((el) => {
     const sale = 17
-    const priceBeforeSale = el.price.value / 100
-    const price = priceBeforeSale - priceBeforeSale * sale / 100
+    const priceBeforeSale = (el.price.value * sale / 100) + el.price.value
+    const price = el.price.value
 
     const image = el.images[0]
     const name = el.name;
 
-    return <Section3Modniky_1_Item price={price} priceBeforeSale={priceBeforeSale} sale={17} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/>
+    return <Section3Modniky_1_Item key={el.id} price={price} priceBeforeSale={priceBeforeSale} sale={17} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/>
   })
 
   return (

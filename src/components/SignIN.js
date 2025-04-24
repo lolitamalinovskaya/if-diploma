@@ -3,9 +3,12 @@ import '../styles/components/Sign.css';
 import CloseIcon from "../svg/close-icon.svg";
 import {useState} from "react";
 import {Redirect} from "react-router-dom";
+import {useAppState} from "./App";
 
 
-export default function SignIN({state, updateState}) {
+export default function SignIN() {
+  const {state, updateState} = useAppState();
+
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 

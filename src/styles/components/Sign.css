@@ -19,7 +19,7 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 1440px) {
+/*@media (max-width: 1440px) {*/
     .sign_container {
         background-color: #BDBDBD;
         max-height: 840px;
@@ -122,7 +122,7 @@
         line-height: 12px;
         text-decoration: underline;
     }
-}
+/*}*/
 
 /*mobile */
 @media only screen and (max-width: 768px) {

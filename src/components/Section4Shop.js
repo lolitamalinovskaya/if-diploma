@@ -6,9 +6,11 @@ import Mask1 from '../images/mask (1).png';
 import Mask2 from '../images/mask (2).png';
 import Mask3 from '../images/mask (3).png';
 import Mask4 from '../images/mask (4).png';
+import {useAppState} from "./App";
 
 
 export default function Section4Shop() {
+  const {state, updateState} = useAppState();
 
   return (
     <>

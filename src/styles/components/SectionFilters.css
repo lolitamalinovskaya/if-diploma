@@ -19,11 +19,13 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 2880px) {
+/*@media (max-width: 2880px) {*/
    .SectionFilters_container {
         box-sizing: border-box;
-        padding: 0 100px;
+        padding: 0 60px;
         background-color: #FFFFFF;
+       max-width: 2600px;
+       margin: 0 auto;
     }
     .sectionFilters_header {
         margin: 90px 0 0;
@@ -38,7 +40,8 @@
         flex-wrap: wrap;
         margin-bottom: 45px;
         margin-top: 80px;
-      /*  justify-content: space-between;*/
+ /*       justify-content: space-between;*/
+        gap: 0 1rem;
     }
   /*  .Like_svg {
         position: absolute;
@@ -51,7 +54,7 @@
     .ImageOfCatalog {
         width: 100%;
         height: 100%;
-        max-width: 300px;
+        max-width: 320px;
         max-height: 400px;
         object-fit: fill;
     }
@@ -90,7 +93,7 @@
         overflow: hidden;
     }
 
-}
+/*}*/
 
 /*mobile */
 @media only screen and (max-width: 900px) {
@@ -98,6 +101,8 @@
         box-sizing: border-box;
         padding: 0 25px;
         background-color: #FFFFFF;
+        max-width: none;
+        min-width: 320px;
     }
     .sectionFilters_header {
         margin: 70px 0 0;
@@ -131,7 +136,7 @@
     .Filter_Price{
         font: 500 16px Roboto;
     }
-    .Items_name{
+    .Items_name {
         display: flex;
         flex-wrap: wrap;
         font: 400 16px Roboto;

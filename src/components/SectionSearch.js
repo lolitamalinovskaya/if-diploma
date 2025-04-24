@@ -5,9 +5,11 @@ import Like from "../svg/like.svg";
 import Insta1 from "../images/insta1.jpg";
 import Section3Modniky_1_Item from "./Section3Modniky_1_Item";
 import {Link} from "react-router-dom";
+import {useAppState} from "./App";
 
 
-export default function SectionSearch({state, updateState}) {
+export default function SectionSearch() {
+  const {state, updateState} = useAppState();
 
   const data = state.searchResult || [];
 
@@ -17,7 +19,7 @@ export default function SectionSearch({state, updateState}) {
 
     const image = el.images[0];
     const name = el.name;
-    return <Section3Modniky_1_Item price={price} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/>
+    return <Section3Modniky_1_Item key={el.id} price={price} imageURL={image} name={name} state={state} updateState={updateState} id={el.id}/>
   })
   return (
     <>

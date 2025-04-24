@@ -13,6 +13,12 @@ import Bag from "./Bag";
 import SectionSearch from "./SectionSearch";
 import Favorite from "./Favorite";
 
+const StateContext = React.createContext(null)
+
+export const useAppState = () => {
+  return React.useContext(StateContext)
+}
+
 function App() {
   const [state, setState] = useReducer((state, action) => {
 
@@ -135,7 +141,7 @@ function App() {
 
     return {
       user: localStorage.getItem('user'),
-      filterType: undefined,
+      filterType: 'Dresses',
       sliderStart: 0,
       sliderSize: width > 998 ? 4 : 2,
       cart: JSON.parse(localStorage.getItem('cart')),
@@ -144,7 +150,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch('https://modnikky-api.herokuapp.com/api/catalog')
+    fetch('https://shop.malinovskaya.lol/api/catalog')
       .then((x) => x.json())
       .then((x) => setState({type: `UPDATE_DATE`, payload: x}))
       .catch(() => setState({type: `UPDATE_DATE`, payload: []}));
@@ -155,21 +161,23 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path={'/product/:id'}> <ItemPage state={state} updateState={setState}/> </Route>
-          <Route exact path={'/'}>
-            <HomePage state={state} updateState={setState}/>
-            {state.searchResult && <SectionSearch state={state} updateState={setState}/>}
-            <Section2Category state={state} updateState={setState}/>
-            <SectionFilters state={state} updateState={setState}/>
-            <Section3Modniky state={state} updateState={setState}/>
-            <Section4Shop/>
-            <Footer/>
-          </Route>
-          <Route exact path={'/signIn'}><SignIN state={state} updateState={setState}/></Route>
-          <Route path={'/bag'}> <Bag state={state} updateState={setState}/> </Route>
-          <Route path={'/favorite'}> <Favorite state={state} updateState={setState}/> </Route>
+          <StateContext.Provider value={{state, updateState: setState}}>
+            <Route exact path={'/'}>
+              <HomePage />
+              {state.searchResult && <SectionSearch />}
+              <Section2Category />
+              <SectionFilters />
+              <Section3Modniky />
+              <Section4Shop/>
+              <Footer/>
+            </Route>
+            <Route exact path={'/signIn'}><SignIN /></Route>
+            <Route path={'/bag'}> <Bag /> </Route>
+            <Route path={'/favorite'}> <Favorite /> </Route>
+            <Route path={'/product/:id'}> <ItemPage /> </Route>
+          </StateContext.Provider>
         </Switch>
-      </Router>
+    </Router>
     </>
   );
 }

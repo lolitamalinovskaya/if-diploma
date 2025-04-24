@@ -19,7 +19,7 @@
     font-style: normal;
     src: url("../../fonts/Roboto-700-l.woff2") format("woff2");
 }
-@media (max-width: 1440px) {
+/*@media (max-width: 1440px) {*/
     .section_header {
         margin: 90px 0 0;
         font: 400 34px Roboto;
@@ -30,15 +30,18 @@
     .section2Category_container {
         box-sizing: border-box;
         min-height: 300px;
-        padding: 0 105px;
+        padding: 0 60px;
         background-color: #FFFFFF;
+        max-width: 2600px;
+        margin: 0 auto;
     }
     .section2Category_container_ALL_items{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 20px 12px;
         margin-top: 85px;
-        /*flex-wrap: wrap;*/
+        flex-wrap: wrap;
     }
     .section2Category_container_items {
         display: flex;
@@ -48,7 +51,7 @@
         width: 195px;
         height: 90px;
         background-color: #ede7f0;
-        margin-right: 12px;
+    /*    margin-right: 12px;*/
         transition: .3s background-color;
     }
     .section2Category_container_items:hover{
@@ -64,7 +67,7 @@
     }
 
     .section2Category_container_items:last-child {
-        margin-right: 0;
+/*        margin-right: 0;*/
     }
     .dress_svg {
         width: 30px;
@@ -95,7 +98,7 @@
         height: 50px;
     }
 
-}
+/*}*/
 
 @media only screen and (max-width: 1220px) {
     .section_header {
@@ -105,11 +108,13 @@
 
     .section2Category_container{
         padding: 0 25px 0;
+        max-width: none;
+        min-width: 320px;
     }
     .section2Category_container_items {
         max-width: 180px;
         max-height: 80px;
-        margin: 0 0 20px;
+/*        margin: 0 0 20px;*/
     }
     .section2Category_container_ALL_items{
         flex-wrap: wrap;

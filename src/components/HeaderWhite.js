@@ -28,7 +28,7 @@ export default function HeaderWhite({state}) {
               <p>COLLECTIONS</p>
             </div>
           </div>
-          <Link exact to={"/"}>
+          <Link exact={"/"} to={"/"}>
             <div className="header_element_logo">
               <img src={LogoBlack} alt="logo" className="Logo"/>
             </div>

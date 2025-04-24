@@ -2,10 +2,12 @@ import React from "react";
 import '../styles/components/Section3Modniky.css';
 import Arrow from '../svg/more.svg'
 import Section3Modniky_All_Items from "./Section3Modniky_All_Items";
+import {useAppState} from "./App";
 
 
 
-export const Section3Modniky = ({state, updateState}) => {
+export const Section3Modniky = () => {
+  const {state, updateState} = useAppState();
 
   const clickLeft = () => {updateState({type: 'SLIDER_PREV'})};
   const clickRight = () => {updateState({type: 'SLIDER_NEXT'})};

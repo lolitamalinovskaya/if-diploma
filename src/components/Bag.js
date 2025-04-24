@@ -7,8 +7,10 @@ import Visa from "../svg/visa-logo.svg";
 import BagItem from "./BagItem";
 
 import '../styles/components/Bag.css';
+import {useAppState} from "./App";
 
-export default function Bag({ state, updateState }) {
+export default function Bag() {
+  const {state, updateState} = useAppState();
 
   const [message, setMessage] = useState(undefined);
 
