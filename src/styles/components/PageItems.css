@@ -175,7 +175,7 @@
         height: auto;
         max-width: unset;
         min-height: unset;
-        object-fit: fill;
+        object-fit: contain;
     }
     .PageImage1_container{
         max-width: unset;
@@ -185,6 +185,6 @@
     }
 
     .Page_description {
-        padding-left: 40px;
+        padding-left: 24px;
     }
 }
