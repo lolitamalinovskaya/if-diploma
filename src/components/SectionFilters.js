@@ -33,7 +33,7 @@ export default function SectionFilters() {
         <div className="SectionFilters_container">
         <h2 className="sectionFilters_header">{state.filterType}</h2>
 
-        <div className="sectionFilters_Item_All_items_container">
+        <div id="catalog-items" className="sectionFilters_Item_All_items_container">
           {items.length > 0 ? items : (state.filterType === undefined ? null :
               <div className="SectionFilters_notFound_container"><p className="SectionFilters_notFound">No beauty
                 products found</p></div>)}

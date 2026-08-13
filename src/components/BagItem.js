@@ -26,7 +26,7 @@ export default function BagItem({state, updateState, item, isFavorite}) {
                 </div>
                 <div className="bag_description_container">
                     <h5 className="bag_description">{item.description}</h5>
-                    <p className="bag_price">{item.price.currency} {new Number(item.price.value / 100).toFixed(2)}</p>
+                    <p className="bag_price">{item.price.currency} {Number(item.price.value).toFixed(2)}</p>
                     <div className="bag_color_container">
                         <p className="bag_color">COLOR: {item.color.name.toUpperCase()}</p>
                         <img src={Dropdown} className="bag_dropdown_svg"/>

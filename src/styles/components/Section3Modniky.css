@@ -72,28 +72,16 @@
         flex-wrap: wrap;
         align-items: baseline;
         justify-content: space-between;
-     /*   flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 25%;*/
+        gap: 16px;
         margin-bottom: 45px;
         margin-top: 80px;
     }
-    /*общий чилдрен */
+
     .section3Modniky_Item {
         max-width: 320px;
         width: 20%;
         flex: 1 0 20%;
-     /*   margin-right: 0.5rem;*/
         margin-bottom: 45px;
-     /*   width: 25%;*/
-       /* box-sizing: border-box;*/
-/*        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 25%;*/
-     /*   width: 25%;*/
-      /*  flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 26%;*/
     }
 
     .section3Modniky_Item_Card {
@@ -178,10 +166,10 @@
     .Items_name {
         font: 400 18px Roboto;
         padding-top: 15px;
-/*        width: 300px;
-        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         overflow: hidden;
-        text-overflow: ellipsis;*/
     }
     .Items_name:hover{
         color: #8275ac;

@@ -20,7 +20,8 @@ export const HomePage = () => {
 
   const onClick = () => setShowSearch(!showSearch);
 
-  const SignOutHandler = () => updateState({type: 'LOGOUT'})
+  const SignOutHandler = () => updateState({type: 'LOGOUT'});
+  const scrollToCatalogItems = () => document.getElementById("catalog-items")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <>
@@ -68,7 +69,7 @@ export const HomePage = () => {
             <p className="main_element_text">Our easiest chuck-on-and-go staples come with a serious style
               heritage <br/>that’s liberating, sexy, comfy
               and supremely cool.</p>
-            <button className="main_element_button">SHOP NEW ARRIVALS</button>
+            <button className="main_element_button" onClick={scrollToCatalogItems}>SHOP NEW ARRIVALS</button>
           </div>
         </main>
       </div>

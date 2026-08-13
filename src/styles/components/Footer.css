@@ -118,6 +118,33 @@
         display: none;
     }
 
+    .footer_credit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 24px;
+    }
+
+    .footer_credit a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        color: inherit;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .LinkedInIcon_svg {
+        width: 16px;
+        height: 16px;
+    }
+
 /*}*/
 
 /*mobile */
