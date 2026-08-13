@@ -15,7 +15,7 @@ export default function SectionSearch() {
 
   const items = [...data].map((el) => {
 
-    const price = el.price.value / 100
+    const price = el.price.value
 
     const image = el.images[0];
     const name = el.name;

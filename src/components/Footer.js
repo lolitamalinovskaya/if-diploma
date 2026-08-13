@@ -5,6 +5,7 @@ import Odnoklassniki from '../svg/odonklassniki-logo.svg';
 import Instagram from '../svg/instagram-logo.svg';
 import Subscription from "./Subscription";
 import IncrementIcon from "../svg/expand-icon.svg";
+import LinkedInIcon from "../svg/linkedin.svg";
 
 import '../styles/components/Footer.css';
 
@@ -59,6 +60,18 @@ export default function Footer() {
             <li>+7 910 832 26XX</li>
             <li>Visit us at Shalalaeva 23,<br/> Bologoe, Russia</li>
           </div>
+        </div>
+        <div className="footer_credit">
+          Designed & built by Lolita Malinovskaya, follow my{" "}
+
+          <a
+              href="https://www.linkedin.com/in/lolita-malinovskaya-by"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+            <img src={LinkedInIcon} alt="LinkedInIcon" className="LinkedInIcon_svg" />
+            LinkedIn
+          </a>
         </div>
       </div>
       </>

@@ -18,7 +18,7 @@ export default function Bag() {
   const values = (state.data || []).filter((e) => cart.includes(e.id));
   const items = values.map((e) => <BagItem state={state} updateState={updateState} key={e.id} item={e}/>);
 
-  const price = Number(values.map((e) => +e.price.value).reduce((a, b) => a + b, 0) / 100).toFixed(2);
+  const price = Number(values.map((e) => +e.price.value).reduce((a, b) => a + b, 0)).toFixed(2);
   const currency = values.length > 0 ? values[0].price.currency : '';
 
   const onClick = () => {
