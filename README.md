@@ -1,3 +1,6 @@
+Project deployed on https://shop.malinovskaya.lol/
+
+
 # Getting Started with Create React App
 ### Node version - less than 15 // 14.21.3
 
